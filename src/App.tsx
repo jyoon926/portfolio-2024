@@ -2,16 +2,16 @@ import React, { useRef, useState, useEffect } from 'react';
 import './App.scss';
 import Menu from './components/Menu';
 import { ColorSchemes, Sections } from './Data';
+import Loader from './components/Loader';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
-  // const [colorScheme, setColorScheme] = useState<number>(parseFloat(localStorage.getItem('theme')!) || 0);
-  const [colorScheme, setColorScheme] = useState<number>(0);
+  const [colorScheme, setColorScheme] = useState<number>(parseFloat(localStorage.getItem('theme')!) || 0);
   const refs = useRef(Sections.map(() => React.createRef<HTMLDivElement>()));
 
   const handleThemeChange = (value: number) => {
     setColorScheme(value);
-    // localStorage.setItem('theme', value.toString());
+    localStorage.setItem('theme', value.toString());
   };
 
   const handleTabClick = (index: number) => {
@@ -73,6 +73,7 @@ function App() {
         } as React.CSSProperties
       }
     >
+      <Loader />
       <Menu
         onThemeChange={handleThemeChange}
         currentSection={currentSection}
