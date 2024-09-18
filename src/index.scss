@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --font-sans: 'neue-haas-grotesk-display';
+}
+
+html {
+  font-size: 16px;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  letter-spacing: 0.02em;
+}
+
+.live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: rgba(var(--foreground), 1);
+  }
+
+  .radius {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: rgba(var(--foreground), 0.25);
+    animation: pulse 1.5s ease-out infinite;
+    transform-origin: center center;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.slider {
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  writing-mode: vertical-lr;
+  direction: rtl;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: rgba(var(--foreground), 0.35);
+    border-radius: 100%;
+  }
+}
+
+.color-slider {
+  transition: height 0.3s;
+  height: 2.25rem;
+
+  .slider {
+    transition:
+      height 0.3s,
+      opacity 0.3s;
+    height: 2.25rem;
+    opacity: 0;
+  }
+
+  .dot {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+
+  &:hover {
+    height: 24rem;
+
+    .slider {
+      height: 24rem;
+      opacity: 1;
+    }
+
+    .dot {
+      opacity: 1;
+    }
+  }
+}
