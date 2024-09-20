@@ -11,6 +11,8 @@ interface Project {
   description: string;
   technologies: string[];
   images: string[];
+  link: string;
+  github: string;
 }
 
 export default function Project() {
@@ -45,6 +47,22 @@ export default function Project() {
             <div className="w-full mb-20 flex flex-row justify-center gap-10">
               <p className="w-1/4 max-w-[200px] opacity-60">Technologies</p>
               <p className="w-3/4 max-w-[600px] leading-snug">{project.technologies.join(', ')}</p>
+            </div>
+            <div className="w-full mb-20 flex flex-row justify-center gap-5">
+              <Link
+                className="bg-foreground/10 py-4 w-32 text-center border rounded duration-300 hover:bg-foreground/15"
+                to={project.link}
+                target="_blank"
+              >
+                Visit Site
+              </Link>
+              <Link
+                className="bg-foreground/10 py-4 w-32 text-center border rounded duration-300 hover:bg-foreground/15"
+                to={project.github}
+                target="_blank"
+              >
+                GitHub
+              </Link>
             </div>
             <div className="w-full grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(600px, 1fr))' }}>
               {project.images.slice(1).map((image, index) => (

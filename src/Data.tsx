@@ -127,6 +127,8 @@ export const Projects = [
       '/models-at-rit-3.png',
       '/models-at-rit-4.png',
     ],
+    link: 'https://modelsatrit.web.app/',
+    github: 'https://github.com/jyoon926/modelsatrit',
   },
   {
     projectUrl: 'chris-elliott-art-gallery',
@@ -144,6 +146,8 @@ export const Projects = [
       '/chris-elliott-4.png',
       '/chris-elliott-5.png',
     ],
+    link: 'https://chris-elliott.web.app/',
+    github: 'https://github.com/jyoon926/chris-elliott',
   },
   {
     projectUrl: 'inspired-playlists',
@@ -159,6 +163,8 @@ export const Projects = [
       '/inspired-playlists-2.png',
       '/inspired-playlists-3.png',
     ],
+    link: 'https://inspiredplaylists.web.app/',
+    github: 'https://github.com/jyoon926/spotify-playlist-creator',
   },
 ];
 
