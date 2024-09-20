@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <div className="flex flex-row ml-72 mr-10 py-10 gap-10 border-t">
-      <div className="grow flex flex-col justify-between">
+    <div className="flex flex-col md:flex-row mx-5 md:ml-72 md:mr-10 py-32 md:py-10 gap-10 border-t">
+      <div className="grow flex flex-col justify-between gap-10">
         <div>
           <div className="flex flex-row gap-3 items-center pb-2">
             <div className="live">

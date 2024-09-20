@@ -5,9 +5,9 @@ export default function Intro() {
   const [currentTab, setCurrentTab] = useState(0);
 
   return (
-    <div className="grow flex flex-col ml-72 mr-10">
-      <div className="w-full h-screen max-w-[1000px] flex flex-col items-start justify-start pt-28 gap-5">
-        <div className="flex flex-row gap-5 text-nowrap">
+    <div className="grow flex flex-col mx-5 md:ml-72 md:mr-10">
+      <div className="w-full mb-32 mt-5 md:my-0 md:h-screen max-w-[1000px] flex flex-col items-start justify-start pt-28 gap-5">
+        <div className="w-full flex flex-row gap-5 text-nowrap overflow-x-auto overflow-y-hidden scrollbar-hidden">
           {Intros.map((intro, index) => (
             <button
               className={`transition-opacity hover:opacity-100 ${currentTab !== index && 'opacity-60'}`}
@@ -18,10 +18,10 @@ export default function Intro() {
             </button>
           ))}
         </div>
-        <div className="text-6xl cursor-default">{Intros[currentTab].text}</div>
+        <div className="text-4xl md:text-6xl cursor-default">{Intros[currentTab].text}</div>
       </div>
       <div className="flex flex-col justify-start items-start py-32 border-t border-b">
-        <p className="grow max-w-[600px] ml-[50%] leading-snug cursor-default">
+        <p className="grow max-w-[600px] md:ml-[50%] leading-snug cursor-default">
           I am a fourth-year computer science student at RIT pursuing a combined BS/MS degree. I've cultivated a strong
           foundation in both theoretical knowledge and practical application. My academic journey has been complemented
           by two six-month co-ops as a software engineer intern, where I gained extensive hands-on industry experience

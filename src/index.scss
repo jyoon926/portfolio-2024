@@ -146,3 +146,13 @@ body {
     opacity: 0;
   }
 }
+
+.backdrop-blur {
+  backdrop-filter: blur(0.5rem);
+}
+
+.scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
