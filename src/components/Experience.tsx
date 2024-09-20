@@ -13,7 +13,7 @@ export default function Experience() {
             </div>
             <div className="flex flex-col gap-3 w-2/3">
               <p className="font-bold">{job.role}</p>
-              <p className="opacity-60 leading-normal max-w-[600px]">{job.description}</p>
+              <p className="opacity-60 leading-snug max-w-[600px]">{job.description}</p>
             </div>
           </div>
         ))}

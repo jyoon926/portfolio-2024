@@ -21,7 +21,7 @@ export default function Menu({ onThemeChange, currentSection, onTabClick, colorS
   return (
     <div className="fixed w-72 h-full flex flex-col p-10 items-start justify-between">
       <div className="flex flex-col gap-10 text-nowrap">
-        <div className="text-2xl font-bold relative cursor-default">Jacob Yoon</div>
+        <div className="text-2xl cursor-default">Jacob Yoon</div>
         <div className="flex flex-col gap-2 items-start">
           {Sections.map((section, index) => (
             <button
@@ -40,8 +40,8 @@ export default function Menu({ onThemeChange, currentSection, onTabClick, colorS
             <IoMdSunny className="text-lg opacity-80" />
           </div>
           {ColorSchemes.slice(0, -2).map((_, index) => (
-            <div className="w-5 h-5 flex justify-center items-center dot">
-              <div className="w-2 h-2 bg-foreground/25 rounded-full" key={index} />
+            <div className="w-5 h-5 flex justify-center items-center dot" key={index}>
+              <div className="w-2 h-2 bg-foreground/25 rounded-full" />
             </div>
           ))}
           <div className="w-5 h-5 flex justify-center items-center">

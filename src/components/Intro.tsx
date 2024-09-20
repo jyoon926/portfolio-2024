@@ -21,7 +21,7 @@ export default function Intro() {
         <div className="text-6xl cursor-default">{Intros[currentTab].text}</div>
       </div>
       <div className="flex flex-col justify-start items-start py-32 border-t border-b">
-        <p className="grow max-w-[600px] ml-[50%] leading-normal cursor-default">
+        <p className="grow max-w-[600px] ml-[50%] leading-snug cursor-default">
           I am a fourth-year computer science student at RIT pursuing a combined BS/MS degree. I've cultivated a strong
           foundation in both theoretical knowledge and practical application. My academic journey has been complemented
           by two six-month co-ops as a software engineer intern, where I gained extensive hands-on industry experience

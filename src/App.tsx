@@ -3,6 +3,9 @@ import './App.scss';
 import Menu from './components/Menu';
 import { ColorSchemes, Sections } from './Data';
 import Loader from './components/Loader';
+import { Route, Routes } from 'react-router-dom';
+import Project from './components/Project';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -56,12 +59,23 @@ function App() {
 
     const lowerScheme = ColorSchemes[lowerIndex];
     const upperScheme = ColorSchemes[upperIndex];
+    const discreteForeground = blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground;
 
     return {
       background: blendColors(lowerScheme.background, upperScheme.background, blendFactor),
-      foreground: blendColors(lowerScheme.foreground, upperScheme.foreground, blendFactor),
+      foreground: discreteForeground,
     };
   };
+
+  const Home = () => (
+    <div>
+      {Sections.map((section, index) => (
+        <div ref={refs.current[index]} key={index}>
+          <section.component />
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div
@@ -73,6 +87,7 @@ function App() {
         } as React.CSSProperties
       }
     >
+      <ScrollToTop />
       <Loader />
       <Menu
         onThemeChange={handleThemeChange}
@@ -80,11 +95,10 @@ function App() {
         onTabClick={handleTabClick}
         colorScheme={colorScheme}
       />
-      {Sections.map((section, index) => (
-        <div key={index} ref={refs.current[index]}>
-          <section.component />
-        </div>
-      ))}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:projectUrl" element={<Project />} />
+      </Routes>
     </div>
   );
 }
