@@ -35,14 +35,16 @@ export default function Project() {
             <p className="opacity-60 mb-5 text-center">Project Overview</p>
             <p className="text-8xl mb-3 text-center">{project.title}</p>
             <p className="text-3xl text-center">{project.date}</p>
-            <img className="my-20 w-3/4 rounded-lg shadow-lg border" src={project.images[0]} alt="" />
+            <div className="my-20 w-3/4 rounded-xl border bg-foreground/10 p-20" key={index}>
+              <img className="w-full rounded-lg shadow-lg" src={project.images[0]} alt="" />
+            </div>
             <div className="w-full mb-10 flex flex-row justify-center gap-10">
-              <p className="w-1/4 max-w-[200px] text-xl opacity-60">About</p>
-              <p className="w-3/4 max-w-[600px] text-xl leading-snug">{project.description}</p>
+              <p className="w-1/4 max-w-[200px] opacity-60">About</p>
+              <p className="w-3/4 max-w-[600px] leading-snug">{project.description}</p>
             </div>
             <div className="w-full mb-20 flex flex-row justify-center gap-10">
-              <p className="w-1/4 max-w-[200px] text-xl opacity-60">Technologies</p>
-              <p className="w-3/4 max-w-[600px] text-xl leading-snug">{project.technologies.join(', ')}</p>
+              <p className="w-1/4 max-w-[200px] opacity-60">Technologies</p>
+              <p className="w-3/4 max-w-[600px] leading-snug">{project.technologies.join(', ')}</p>
             </div>
             <div className="w-full grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(600px, 1fr))' }}>
               {project.images.slice(1).map((image, index) => (
@@ -51,7 +53,7 @@ export default function Project() {
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-row justify-between pt-20">
+            <div className="w-full flex flex-row justify-between pt-20 my-12">
               <div>
                 {index > 0 && (
                   <Link className="flex flex-row items-center gap-5" to={`/project/${Projects[index - 1].projectUrl}`}>

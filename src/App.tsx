@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.scss';
 import Menu from './components/Menu';
 import { ColorSchemes, Sections } from './Data';
@@ -10,46 +10,50 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
   const [colorScheme, setColorScheme] = useState<number>(parseFloat(localStorage.getItem('theme')!) || 0);
-  const refs = useRef(Sections.map(() => React.createRef<HTMLDivElement>()));
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const offset = windowHeight / 2;
+
+    for (let i = 0; i < sectionRefs.current.length; i++) {
+      const section = sectionRefs.current[i];
+      if (section) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop - offset && scrollPosition < sectionBottom - offset) {
+          setCurrentSection(i);
+          return;
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleTabClick = (index: number) => {
+    const section = sectionRefs.current[index];
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleThemeChange = (value: number) => {
     setColorScheme(value);
     localStorage.setItem('theme', value.toString());
   };
 
-  const handleTabClick = (index: number) => {
-    refs.current[index].current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  useEffect(() => {
-    const observers = refs.current.map((ref, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(index);
-          }
-        },
-        { threshold: 0.5 }
-      );
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-      return observer;
-    });
-    return () => {
-      observers.forEach((observer) => observer.disconnect());
-    };
-  }, []);
-
   const blendColors = (color1: string, color2: string, factor: number): string => {
     const [r1, g1, b1] = color1.split(',').map(Number);
     const [r2, g2, b2] = color2.split(',').map(Number);
-
-    const r = Math.round(r1 + factor * (r2 - r1));
-    const g = Math.round(g1 + factor * (g2 - g1));
-    const b = Math.round(b1 + factor * (b2 - b1));
-
-    return `${r}, ${g}, ${b}`;
+    return `${Math.round(r1 + factor * (r2 - r1))}, 
+            ${Math.round(g1 + factor * (g2 - g1))}, 
+            ${Math.round(b1 + factor * (b2 - b1))}`;
   };
 
   const getBlendedColors = () => {
@@ -59,31 +63,31 @@ function App() {
 
     const lowerScheme = ColorSchemes[lowerIndex];
     const upperScheme = ColorSchemes[upperIndex];
-    const discreteForeground = blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground;
+    const background = blendColors(lowerScheme.background, upperScheme.background, blendFactor);
+    const foreground = blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground;
 
-    return {
-      background: blendColors(lowerScheme.background, upperScheme.background, blendFactor),
-      foreground: discreteForeground,
-    };
+    return { background, foreground };
   };
 
   const Home = () => (
     <div>
       {Sections.map((section, index) => (
-        <div ref={refs.current[index]} key={index}>
+        <div key={index} ref={(el) => (sectionRefs.current[index] = el)}>
           <section.component />
         </div>
       ))}
     </div>
   );
 
+  const blendedColors = getBlendedColors();
+
   return (
     <div
       className="bg-background text-foreground"
       style={
         {
-          '--background': getBlendedColors().background,
-          '--foreground': getBlendedColors().foreground,
+          '--background': blendedColors.background,
+          '--foreground': blendedColors.foreground,
         } as React.CSSProperties
       }
     >
