@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import { Projects } from '../Data';
 import { useEffect, useState } from 'react';
-import { MdArrowBack, MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
+import { MdArrowBack, MdArrowBackIos, MdArrowForwardIos, MdOpenInNew } from 'react-icons/md';
+import { FaGithub } from 'react-icons/fa';
 
 interface Project {
   projectUrl: string;
@@ -50,17 +51,19 @@ export default function Project() {
             </div>
             <div className="w-full mb-20 flex flex-row justify-center gap-5">
               <Link
-                className="bg-foreground/10 py-4 w-32 text-center border rounded duration-300 hover:bg-foreground/15"
+                className="bg-foreground/10 py-4 w-32 flex flex-row items-center justify-center gap-2 border rounded duration-300 hover:bg-foreground/15"
                 to={project.link}
                 target="_blank"
               >
+                <MdOpenInNew className="text-xl" />
                 Visit Site
               </Link>
               <Link
-                className="bg-foreground/10 py-4 w-32 text-center border rounded duration-300 hover:bg-foreground/15"
+                className="bg-foreground/10 py-4 w-32 flex flex-row items-center justify-center gap-2 border rounded duration-300 hover:bg-foreground/15"
                 to={project.github}
                 target="_blank"
               >
+                <FaGithub className="text-xl" />
                 GitHub
               </Link>
             </div>
