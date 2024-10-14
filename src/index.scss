@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   scroll-behavior: smooth;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 * {
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .live {
@@ -88,8 +88,10 @@ body {
 .color-slider {
   transition: height 0.3s;
   height: 2.25rem;
+  box-sizing: content-box;
 
   .slider {
+    outline: none;
     transition:
       height 0.3s,
       opacity 0.3s;
@@ -148,11 +150,29 @@ body {
 }
 
 .backdrop-blur {
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.75rem);
 }
 
 .scrollbar-hidden {
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    font-size: 1.3rem;
   }
 }

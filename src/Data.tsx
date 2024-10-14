@@ -5,7 +5,7 @@ import Work from './components/Work';
 
 export const Sections = [
   { title: 'Intro', component: Intro },
-  { title: 'Work', component: Work },
+  { title: 'Projects', component: Work },
   { title: 'Experience', component: Experience },
   { title: 'Contact', component: Contact },
 ];
@@ -22,69 +22,89 @@ export const ColorSchemes = [
     foreground: '255, 255, 255',
   },
   {
-    name: 'Dark Marine',
-    background: '24, 41, 56',
+    name: 'Dark Grey',
+    background: '74, 71, 68',
     foreground: '255, 255, 255',
   },
   {
-    name: 'Dark Blue',
-    background: '46, 50, 72',
+    name: 'Dark Tan',
+    background: '114, 96, 74',
     foreground: '255, 255, 255',
   },
-  {
-    name: 'Dark Purple',
-    background: '64, 54, 79',
-    foreground: '255, 255, 255',
-  },
-  {
-    name: 'Dark Pink',
-    background: '84, 60, 89',
-    foreground: '255, 255, 255',
-  },
-  {
-    name: 'Dark Red',
-    background: '119, 58, 53',
-    foreground: '255, 255, 255',
-  },
-  {
-    name: 'Dark Orange',
-    background: '157, 68, 51',
-    foreground: '255, 255, 255',
-  },
-  {
-    name: 'Light Orange',
-    background: '255, 210, 180',
-    foreground: '39, 39, 39',
-  },
+  // {
+  //   name: 'Dark Marine',
+  //   background: '24, 41, 56',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Dark Blue',
+  //   background: '46, 50, 72',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Dark Purple',
+  //   background: '64, 54, 79',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Dark Pink',
+  //   background: '84, 60, 89',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Dark Red',
+  //   background: '119, 58, 53',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Dark Orange',
+  //   background: '157, 68, 51',
+  //   foreground: '255, 255, 255',
+  // },
+  // {
+  //   name: 'Light Orange',
+  //   background: '255, 210, 180',
+  //   foreground: '39, 39, 39',
+  // },
+  // {
+  //   name: 'Light Brown',
+  //   background: '243, 230, 207',
+  //   foreground: '39, 39, 39',
+  // },
+  // {
+  //   name: 'Light Green',
+  //   background: '209, 218, 203',
+  //   foreground: '39, 39, 39',
+  // },
+  // {
+  //   name: 'Light Marine',
+  //   background: '213, 227, 222',
+  //   foreground: '39, 39, 39',
+  // },
+  // {
+  //   name: 'Light Blue',
+  //   background: '218, 229, 232',
+  //   foreground: '39, 39, 39',
+  // },
   {
     name: 'Light Brown',
-    background: '243, 230, 207',
-    foreground: '39, 39, 39',
+    background: '209, 199, 186',
+    foreground: '26, 23, 20',
   },
   {
     name: 'Light Olive',
-    background: '213, 209, 183',
-    foreground: '39, 39, 39',
+    background: '211, 214, 197',
+    foreground: '31, 33, 26',
   },
   {
-    name: 'Light Green',
-    background: '209, 218, 203',
-    foreground: '39, 39, 39',
-  },
-  {
-    name: 'Light Marine',
-    background: '213, 227, 222',
-    foreground: '39, 39, 39',
-  },
-  {
-    name: 'Light Blue',
-    background: '218, 229, 232',
-    foreground: '39, 39, 39',
+    name: 'Light Tan',
+    background: '229, 225, 219',
+    foreground: '69, 61, 56',
   },
   {
     name: 'Light White',
     background: '255, 255, 255',
-    foreground: '39, 39, 39',
+    foreground: '60, 60, 60',
   },
 ];
 
@@ -127,7 +147,7 @@ export const Projects = [
       '/models-at-rit-3.png',
       '/models-at-rit-4.png',
     ],
-    link: 'https://modelsatrit.web.app/',
+    link: 'https://modelsatrit.com/',
     github: 'https://github.com/jyoon926/modelsatrit',
   },
   {

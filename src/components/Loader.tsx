@@ -17,11 +17,10 @@ const AnimatedLoader = () => {
 
   return (
     <div
-      className={`loading-screen fixed inset-0 flex flex-col items-start justify-center p-5 md:p-10 bg-background z-50 duration-1000 ${!backgroundVisible && 'loaded'}`}
+      className={`loading-screen fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50 duration-1000 ${!backgroundVisible && 'loaded'}`}
     >
-      <div className={`loading-text text-4xl md:text-6xl ${!textVisible && 'loaded'}`}>
-        <div>Jacob Yoon —</div>
-        <div>Software Engineer</div>
+      <div className={`loading-text text-2xl ${!textVisible && 'loaded'}`}>
+        <div>Jacob Yoon<span className='opacity-50'> — Software Engineer</span></div>
       </div>
     </div>
   );

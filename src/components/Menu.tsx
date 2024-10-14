@@ -1,62 +1,32 @@
-import React from 'react';
-import { ColorSchemes, Sections } from '../Data';
-import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import { Sections } from '../Data';
 
 interface Props {
-  onThemeChange: (value: number) => void;
   currentSection: number;
   onTabClick: (index: number) => void;
-  colorScheme: number;
 }
 
-export default function Menu({ onThemeChange, currentSection, onTabClick, colorScheme }: Props) {
+export default function Menu({ currentSection, onTabClick }: Props) {
   const handleTabClick = (index: number) => {
     onTabClick(index);
   };
 
-  const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onThemeChange(parseFloat(event.target.value));
-  };
-
   return (
-    <div className="fixed w-72 h-full flex flex-col p-5 md:p-10 items-start justify-between">
-      <div className="flex flex-col gap-10 text-nowrap">
-        <div className="text-2xl cursor-default">Jacob Yoon</div>
-        <div className="hidden md:flex flex-col gap-2 items-start">
-          {Sections.map((section, index) => (
+    <div className="fixed w-full flex flex-row gap-3 p-3 items-start justify-between z-40 backdrop-blur bg-background/50 border-b">
+      <button onClick={() => handleTabClick(0)}>Jacob Yoon<span className='hidden sm:inline opacity-50'> — Software Engineer</span></button>
+      <div className="flex flex-row gap-1 items-start">
+        {Sections.map((section, index) => (
+          <div key={index}>
             <button
-              className={`transition-opacity hover:opacity-100 ${index !== currentSection && 'opacity-60'}`}
+              className={`pr-1 transition-opacity hover:opacity-100 ${index !== currentSection && 'opacity-50'}`}
               onClick={() => handleTabClick(index)}
-              key={index}
             >
               {section.title}
             </button>
-          ))}
-        </div>
-      </div>
-      <div className="color-slider w-9 h-96 flex flex-col justify-start items-center rounded-full bg-foreground/15 overflow-hidden backdrop-blur z-40">
-        <div className="notches grow flex flex-col justify-between items-center p-2 gap-1 pointer-events-none">
-          <div className="w-5 h-5 flex justify-center items-center">
-            <IoMdSunny className="text-lg opacity-80" />
+            {index < Sections.length - 1 && (
+              <span className='opacity-50'>/</span>
+            )}
           </div>
-          {ColorSchemes.slice(0, -2).map((_, index) => (
-            <div className="w-5 h-5 flex justify-center items-center dot" key={index}>
-              <div className="w-2 h-2 bg-foreground/25 rounded-full" />
-            </div>
-          ))}
-          <div className="w-5 h-5 flex justify-center items-center">
-            <IoMdMoon className="text-lg opacity-80" />
-          </div>
-        </div>
-        <input
-          type="range"
-          min="0"
-          max={ColorSchemes.length - 1}
-          step="0.1"
-          value={colorScheme}
-          onChange={handleSliderChange}
-          className="slider absolute w-9 h-96 p-1"
-        />
+        ))}
       </div>
     </div>
   );

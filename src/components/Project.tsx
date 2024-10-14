@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { Projects } from '../Data';
 import { useEffect, useState } from 'react';
-import { MdArrowBack, MdArrowBackIos, MdArrowForwardIos, MdOpenInNew } from 'react-icons/md';
+import { MdArrowBackIos, MdArrowForwardIos, MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 
 interface Project {
@@ -28,30 +28,30 @@ export default function Project() {
   }, [projectUrl]);
 
   return (
-    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 sm:p-10 pb-20 flex flex-col justify-start items-start gap-10">
-      <Link className="mb-10 flex flex-row items-center gap-2 transition-opacity opacity-60 hover:opacity-100" to="/">
-        <MdArrowBack className="text-lg" /> Home
+    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-3 pb-20 flex flex-col justify-start items-start gap-10">
+      <Link className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70" to="/">
+        <MdArrowBackIos className='text-sm' /> Home
       </Link>
       {project ? (
         <>
-          <div className="w-full flex flex-col items-center">
-            <p className="opacity-60 mb-5 text-center">Project Overview</p>
-            <p className="text-5xl md:text-8xl mb-3 text-center">{project.title}</p>
-            <p className="text-2xl md:text-3xl text-center">{project.date}</p>
-            <div className="my-20 lg:w-3/4 rounded-lg border bg-foreground/10 p-5 lg:p-20" key={index}>
+          <div className="w-full flex flex-col items-center gap-3 mt-32">
+            <p className="opacity-60 text-center">Project Overview</p>
+            <p className="text-5xl text-center">{project.title}</p>
+            <p className="text-center">{project.date}</p>
+            <div className="my-20 lg:w-3/4 rounded-lg border bg-foreground/15 p-5 lg:p-10" key={index}>
               <img className="w-full rounded-md shadow-md" src={project.images[0]} alt="" />
             </div>
-            <div className="w-full mb-10 flex flex-col md:flex-row justify-center gap-3 md:gap-10">
+            <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-60">About</p>
               <p className="md:w-3/4 max-w-[600px] leading-snug">{project.description}</p>
             </div>
-            <div className="w-full mb-20 flex flex-col md:flex-row justify-center gap-3 md:gap-10">
+            <div className="w-full mb-20 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-60">Technologies</p>
               <p className="md:w-3/4 max-w-[600px] leading-snug">{project.technologies.join(', ')}</p>
             </div>
             <div className="w-full mb-20 flex flex-row justify-center gap-5">
               <Link
-                className="bg-foreground/10 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded-md duration-300 hover:bg-foreground/15"
                 to={project.link}
                 target="_blank"
               >
@@ -59,7 +59,7 @@ export default function Project() {
                 Visit Site
               </Link>
               <Link
-                className="bg-foreground/10 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded-md duration-300 hover:bg-foreground/15"
                 to={project.github}
                 target="_blank"
               >
@@ -68,16 +68,16 @@ export default function Project() {
               </Link>
             </div>
             <div
-              className="w-full flex flex-col md:grid gap-5"
-              style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(600px, 1fr))' }}
+              className="w-full flex flex-col md:grid gap-3"
+              style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
             >
               {project.images.slice(1).map((image, index) => (
-                <div className="rounded-lg border bg-foreground/10 p-5 md:p-10" key={index}>
-                  <img className="w-full rounded-md shadow-md" src={image} alt={image} />
+                <div className="rounded-md border bg-foreground/15 p-5 md:p-8" key={index}>
+                  <img className="w-full rounded shadow-md" src={image} alt={image} />
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-row justify-between pt-20 my-12">
+            <div className="w-full flex flex-row justify-between pt-20 my-12 pl-3 pr-1">
               <div>
                 {index > 0 && (
                   <Link className="flex flex-row items-center gap-5" to={`/project/${Projects[index - 1].projectUrl}`}>

@@ -1,16 +1,16 @@
 export default function Contact() {
   return (
-    <div className="flex flex-col md:flex-row mx-5 md:ml-72 md:mr-10 py-32 md:py-10 gap-10 border-t">
+    <div className="flex flex-col md:flex-row mx-3 py-3 gap-10 border-t">
       <div className="grow flex flex-col justify-between gap-10">
-        <div>
-          <div className="flex flex-row gap-3 items-center pb-2">
+        <div className="leading-snug">
+          <div className="flex flex-row gap-3 items-center pb-1">
             <div className="live">
               <div className="dot" />
               <div className="radius" />
             </div>
-            <p className="opacity-60">Available for work</p>
+            <p>Available for work</p>
           </div>
-          <p className="text-2xl">
+          <p className="opacity-50">
             I am currently looking for Summer 2025 internship opportunities in software engineering. I hope to hear from
             you!
           </p>
@@ -27,7 +27,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <img className="w-72 rounded-lg border" src="/headshot.jpg" alt="" />
+      <img className="w-80 rounded-md border" src="/headshot.jpg" alt="" />
     </div>
   );
 }

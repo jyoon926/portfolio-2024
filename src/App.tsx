@@ -6,6 +6,7 @@ import Loader from './components/Loader';
 import { Route, Routes } from 'react-router-dom';
 import Project from './components/Project';
 import ScrollToTop from './components/ScrollToTop';
+import ColorSlider from './components/ColorSlider';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -57,33 +58,39 @@ function App() {
   };
 
   const getBlendedColors = () => {
-    const lowerIndex = Math.floor(colorScheme);
-    const upperIndex = Math.ceil(colorScheme) % ColorSchemes.length;
-    const blendFactor = colorScheme - lowerIndex;
+    try {
+      const lowerIndex = Math.floor(colorScheme);
+      const upperIndex = Math.ceil(colorScheme) % ColorSchemes.length;
+      const blendFactor = colorScheme - lowerIndex;
+  
+      const lowerScheme = ColorSchemes[lowerIndex];
+      const upperScheme = ColorSchemes[upperIndex];
+      const background = blendColors(lowerScheme.background, upperScheme.background, blendFactor);
+      const foreground = blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground;
 
-    const lowerScheme = ColorSchemes[lowerIndex];
-    const upperScheme = ColorSchemes[upperIndex];
-    const background = blendColors(lowerScheme.background, upperScheme.background, blendFactor);
-    const foreground = blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground;
-
-    return { background, foreground };
+      return { background, foreground };
+    } catch (e) {
+      console.log(e);
+      handleThemeChange(0);
+      return getBlendedColors();
+    }
   };
+
+  const blendedColors = getBlendedColors();
 
   const Home = () => (
     <div>
       {Sections.map((section, index) => (
         <div key={index} ref={(el) => (sectionRefs.current[index] = el)}>
-          <section.component />
+          <section.component onTabClick={handleTabClick} />
         </div>
       ))}
     </div>
   );
 
-  const blendedColors = getBlendedColors();
-
   return (
     <div
-      className="bg-background text-foreground"
+      className="bg-background text-foreground font-semibold"
       style={
         {
           '--background': blendedColors.background,
@@ -94,15 +101,14 @@ function App() {
       <ScrollToTop />
       <Loader />
       <Menu
-        onThemeChange={handleThemeChange}
         currentSection={currentSection}
         onTabClick={handleTabClick}
-        colorScheme={colorScheme}
       />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:projectUrl" element={<Project />} />
       </Routes>
+      <ColorSlider colorScheme={colorScheme} onThemeChange={handleThemeChange} />
     </div>
   );
 }
