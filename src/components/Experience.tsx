@@ -9,7 +9,7 @@ export default function Experience() {
           <div className="flex flex-col md:flex-row gap-3 justify-start items-start leading-snug" key={index}>
             <div className="flex flex-col w-full gap-1 md:w-1/3">
               <p className="font-bold">{job.company}</p>
-              <p className="opacity-60">{job.date}</p>
+              <p className="opacity-50">{job.date}</p>
             </div>
             <div className="flex flex-col w-full gap-1 md:w-2/3 max-w-[600px]">
               <p className="font-bold">{job.role}</p>
