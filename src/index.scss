@@ -14,6 +14,12 @@ html {
   font-size: 14px;
   line-height: 1;
   scroll-behavior: smooth;
+  background-color: rgb(var(--background));
+}
+
+::selection {
+  background-color: rgba(var(--foreground), 0.5);
+  color: rgb(var(--background));
 }
 
 body {

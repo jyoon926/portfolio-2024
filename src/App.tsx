@@ -78,6 +78,12 @@ function App() {
 
   const blendedColors = getBlendedColors();
 
+  useEffect(() => {
+    const html = document.documentElement;
+    html.style.setProperty('--background', blendedColors.background);
+    html.style.setProperty('--foreground', blendedColors.foreground);
+  }, [blendedColors]);
+
   const Home = () => (
     <div>
       {Sections.map((section, index) => (
@@ -89,15 +95,7 @@ function App() {
   );
 
   return (
-    <div
-      className="bg-background text-foreground font-semibold"
-      style={
-        {
-          '--background': blendedColors.background,
-          '--foreground': blendedColors.foreground,
-        } as React.CSSProperties
-      }
-    >
+    <div className="text-foreground font-semibold">
       <ScrollToTop />
       <Loader />
       <Menu
