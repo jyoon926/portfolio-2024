@@ -6,8 +6,8 @@ const AnimatedLoader = () => {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => setTextVisible(false), 1500);
-      setTimeout(() => setBackgroundVisible(false), 2000);
+      setTimeout(() => setTextVisible(false), 1000);
+      setTimeout(() => setBackgroundVisible(false), 1500);
     };
 
     if (document.readyState === 'complete') handleLoad();
@@ -17,9 +17,9 @@ const AnimatedLoader = () => {
 
   return (
     <div
-      className={`loading-screen fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50 duration-1000 ${!backgroundVisible && 'loaded'}`}
+      className={`loading-screen fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50 ${!backgroundVisible && 'duration-1000 loaded'}`}
     >
-      <div className={`loading-text text-xl md:text-3xl ${!textVisible && 'loaded'}`}>
+      <div className={`loading-text text-xl md:text-3xl ${!textVisible && 'duration-1000 loaded'}`}>
         <div>Jacob Yoon<span className='opacity-50'> — Software Engineer</span></div>
       </div>
     </div>
