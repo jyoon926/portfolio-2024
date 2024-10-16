@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Intros } from '../Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
+import Star from './Star';
 
 interface Props {
   onTabClick: (index: number) => void;
@@ -81,6 +82,7 @@ export default function Intro({ onTabClick }: Props) {
         </p>
         <button className='button' onClick={() => onTabClick(1)}>View Projects <IoArrowDownSharp /></button>
       </div>
+      <Star />
     </div>
   );
 }

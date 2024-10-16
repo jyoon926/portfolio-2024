@@ -28,7 +28,7 @@ export const ColorSchemes = [
   },
   {
     name: 'Dark Tan',
-    background: '114, 96, 74',
+    background: '107, 96, 84',
     foreground: '255, 255, 255',
   },
   // {

@@ -3,7 +3,7 @@ import { Projects } from '../Data';
 
 export default function Work() {
   return (
-    <div className="flex flex-col items-start justify-start mx-3 border-t py-20">
+    <div className="flex flex-col items-start justify-start mx-3 py-20">
       <p className="text-4xl mb-10">Latest Projects</p>
       <div
         className="w-full flex flex-col md:grid gap-x-3 gap-y-5"
