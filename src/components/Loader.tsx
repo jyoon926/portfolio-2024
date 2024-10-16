@@ -19,7 +19,7 @@ const AnimatedLoader = () => {
     <div
       className={`loading-screen fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50 duration-1000 ${!backgroundVisible && 'loaded'}`}
     >
-      <div className={`loading-text text-2xl ${!textVisible && 'loaded'}`}>
+      <div className={`loading-text text-xl md:text-3xl ${!textVisible && 'loaded'}`}>
         <div>Jacob Yoon<span className='opacity-50'> — Software Engineer</span></div>
       </div>
     </div>
