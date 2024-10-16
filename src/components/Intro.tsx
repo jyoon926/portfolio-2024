@@ -48,7 +48,7 @@ export default function Intro({ onTabClick }: Props) {
             {/* Tabs */}
             <div
               ref={tabContainerRef}
-              className="flex flex-row gap-1 text-nowrap overflow-x-auto scrollbar-hidden"
+              className="flex flex-row gap-1 text-nowrap overflow-x-auto overflow-y-hidden scrollbar-hidden"
               >
               {Intros.map((intro, index) => (
                 <div key={index}>
