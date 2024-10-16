@@ -34,22 +34,22 @@ export default function Project() {
       </Link>
       {project ? (
         <>
-          <div className="w-full flex flex-col items-center gap-3 mt-32">
+          <div className="w-full flex flex-col items-center gap-3 mt-24">
             <p className="opacity-50 text-center">Project Overview</p>
             <p className="text-5xl text-center">{project.title}</p>
             <p className="text-center">{project.date}</p>
-            <div className="my-20 lg:w-3/4 rounded-lg border bg-foreground/15 p-5 lg:p-10" key={index}>
+            <div className="my-10 lg:w-3/4 rounded-lg border bg-foreground/15 p-5 lg:p-10" key={index}>
               <img className="w-full rounded-md shadow-md" src={project.images[0]} alt="" />
             </div>
             <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">About</p>
               <p className="md:w-3/4 max-w-[600px] leading-snug">{project.description}</p>
             </div>
-            <div className="w-full mb-20 flex flex-col md:flex-row justify-center gap-3">
+            <div className="w-full mb-10 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">Technologies</p>
               <p className="md:w-3/4 max-w-[600px] leading-snug">{project.technologies.join(', ')}</p>
             </div>
-            <div className="w-full mb-20 flex flex-row justify-center gap-5">
+            <div className="w-full mb-10 flex flex-row justify-center gap-5">
               <Link
                 className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded-md duration-300 hover:bg-foreground/15"
                 to={project.link}
@@ -77,7 +77,7 @@ export default function Project() {
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-row justify-between pt-20 my-12 pl-3 pr-1">
+            <div className="w-full flex flex-row justify-between pt-12 pl-3 pr-1">
               <div>
                 {index > 0 && (
                   <Link className="flex flex-row items-center gap-5" to={`/project/${Projects[index - 1].projectUrl}`}>

@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <div className="flex flex-col md:flex-row mx-3 py-3 gap-10 border-t">
-      <div className="grow flex flex-col justify-between gap-10">
+    <div className="flex flex-col md:flex-row mx-3 py-3 gap-5 border-t">
+      <div className="grow flex flex-col justify-between gap-5">
         <div className="leading-snug">
           <div className="flex flex-row gap-3 items-center pb-1">
             <div className="live">
@@ -27,7 +27,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <img className="w-80 rounded-md border" src="/headshot.jpg" alt="" />
+      <img className="w-80 rounded-md border mix-blend-luminosity" src="/headshot.jpg" alt="" />
     </div>
   );
 }

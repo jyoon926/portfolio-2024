@@ -176,3 +176,24 @@ body {
     font-size: 1.3rem;
   }
 }
+
+.gradient-left,
+.gradient-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+
+.gradient-left {
+  left: 0;
+  background: linear-gradient(to right, rgb(var(--background)), transparent);
+}
+
+.gradient-right {
+  right: 0;
+  background: linear-gradient(to left, rgb(var(--background)), transparent);
+}
