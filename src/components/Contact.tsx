@@ -11,7 +11,7 @@ export default function Contact() {
             <p>Available for work</p>
           </div>
           <p className="opacity-50">
-            I am currently looking for Summer 2025 internship opportunities in software engineering. I hope to hear from
+            I am currently looking for full time software engineering roles starting in 2026. I hope to hear from
             you!
           </p>
         </div>
