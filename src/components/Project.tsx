@@ -43,11 +43,11 @@ export default function Project() {
             </div>
             <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">About</p>
-              <p className="md:w-3/4 max-w-[600px] leading-snug">{project.description}</p>
+              <p className="md:w-3/4 max-w-[600px] leading-normal">{project.description}</p>
             </div>
             <div className="w-full mb-10 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">Technologies</p>
-              <p className="md:w-3/4 max-w-[600px] leading-snug">{project.technologies.join(', ')}</p>
+              <p className="md:w-3/4 max-w-[600px] leading-normal">{project.technologies.join(', ')}</p>
             </div>
             <div className="w-full mb-10 flex flex-row justify-center gap-5">
               <Link

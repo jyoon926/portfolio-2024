@@ -6,8 +6,8 @@ const AnimatedLoader = () => {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => setTextVisible(false), 1000);
-      setTimeout(() => setBackgroundVisible(false), 1500);
+      setTimeout(() => setTextVisible(false), 1500);
+      setTimeout(() => setBackgroundVisible(false), 2000);
     };
 
     if (document.readyState === 'complete') handleLoad();

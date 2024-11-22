@@ -133,6 +133,23 @@ export const Intros = [
 
 export const Projects = [
   {
+    projectUrl: 'spotify-spheres',
+    title: 'Spotify Spheres',
+    caption: 'React, Tailwind CSS, Spotify Web API, OpenAI API',
+    date: 'November 2024 - Present',
+    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Spotify Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each "sphere" begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I’ve developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. This approach gives users a unique, intentional way to shape and explore their listening experience. Looking ahead, I plan to integrate the app with a secure database so users can create and manage multiple spheres. Additionally, I aim to incorporate OpenAI’s API to automatically generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
+    technologies: ['React', 'Tailwind CSS', 'Spotify Web API', 'Firebase', 'OpenAI API'],
+    images: [
+      '/spotify-spheres.png',
+      '/spotify-spheres-1.png',
+      '/spotify-spheres-2.png',
+      '/spotify-spheres-3.png',
+      '/spotify-spheres.png',
+    ],
+    link: 'https://spotifyspheres.web.app/',
+    github: 'https://github.com/jyoon926/spotify-spheres',
+  },
+  {
     projectUrl: 'models-at-rit',
     title: 'Models @ RIT',
     caption: 'React, Supabase, UI/UX',
@@ -146,6 +163,9 @@ export const Projects = [
       '/models-at-rit-2.png',
       '/models-at-rit-3.png',
       '/models-at-rit-4.png',
+      '/models-at-rit-5.png',
+      '/models-at-rit-6.png',
+      '/models-at-rit-7.png',
     ],
     link: 'https://modelsatrit.com/',
     github: 'https://github.com/jyoon926/modelsatrit',
@@ -190,6 +210,13 @@ export const Projects = [
 
 export const Jobs = [
   {
+    company: 'Epic Systems',
+    role: 'Software Engineering Intern',
+    date: 'May 2025 — August 2025',
+    description:
+      'Upcoming role.',
+  },
+  {
     company: 'Dassault Systèmes BIOVIA',
     role: 'Software Engineer Intern',
     date: 'June 2024 — December 2024',
@@ -201,7 +228,7 @@ export const Jobs = [
     role: 'Software Engineer Intern',
     date: 'May 2023 — December 2023',
     description:
-      'I overhauled the search functionality in a legacy application using Angular and .NET, resulting in a 90% improvement in search performance. Additionally, I developed .NET endpoints to optimize interactions with Oracle, significantly reducing data retrieval times. I also built an internal tool using Angular and Express to automate the creation of demo data in application environments.',
+      'I overhauled the search functionality in a legacy application using Angular and .NET, resulting in a 90% improvement in search performance. Additionally, I developed .NET endpoints to optimize interactions with Oracle, significantly reducing data retrieval times. I also built internal tools using Angular, Node.js, and Express to automate the creation of demo data in application environments.',
   },
   {
     company: 'RIT Department of Computer Science',
