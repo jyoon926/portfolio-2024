@@ -144,6 +144,8 @@ export const Projects = [
       '/spotify-spheres-1.png',
       '/spotify-spheres-2.png',
       '/spotify-spheres-3.png',
+      '/spotify-spheres-4.png',
+      '/spotify-spheres-5.png',
       '/spotify-spheres.png',
     ],
     link: 'https://spotifyspheres.web.app/',
