@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Intros } from '../Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
-import Star from './Star';
 
 interface Props {
   onTabClick: (index: number) => void;
