@@ -10,7 +10,7 @@ import ColorSlider from './components/ColorSlider';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
-  const [colorScheme, setColorScheme] = useState<number>(parseFloat(localStorage.getItem('theme')!) || 0);
+  const [colorScheme, setColorScheme] = useState<number>(parseFloat(localStorage.getItem('theme')!) || 2.3);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleScroll = () => {
