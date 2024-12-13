@@ -28,7 +28,7 @@ export default function Project() {
   }, [projectUrl]);
 
   return (
-    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-3 pb-20 flex flex-col justify-start items-start gap-10">
+    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-28 flex flex-col justify-start items-start gap-10">
       <Link className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70" to="/">
         <MdArrowBackIos className='text-sm' /> Home
       </Link>
@@ -36,10 +36,10 @@ export default function Project() {
         <>
           <div className="w-full flex flex-col items-center gap-3 mt-24">
             <p className="opacity-50 text-center">Project Overview</p>
-            <p className="text-5xl text-center">{project.title}</p>
+            <p className="text-4xl text-center">{project.title}</p>
             <p className="text-center">{project.date}</p>
-            <div className="my-10 lg:w-3/4 rounded-lg border bg-foreground/15 p-5 lg:p-10" key={index}>
-              <img className="w-full rounded-md shadow-md" src={project.images[0]} alt="" />
+            <div className="my-10 lg:w-3/4 border bg-foreground/15 p-5 lg:p-10" key={index}>
+              <img className="w-full" src={project.images[0]} alt="" />
             </div>
             <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">About</p>
@@ -51,7 +51,7 @@ export default function Project() {
             </div>
             <div className="w-full mb-10 flex flex-row justify-center gap-5">
               <Link
-                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded-md duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
                 to={project.link}
                 target="_blank"
               >
@@ -59,7 +59,7 @@ export default function Project() {
                 Visit Site
               </Link>
               <Link
-                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border rounded-md duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
                 to={project.github}
                 target="_blank"
               >
@@ -68,16 +68,16 @@ export default function Project() {
               </Link>
             </div>
             <div
-              className="w-full flex flex-col md:grid gap-3"
+              className="w-full flex flex-col md:grid gap-5"
               style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
             >
               {project.images.slice(1).map((image, index) => (
-                <div className="rounded-md border bg-foreground/15 p-5 md:p-8" key={index}>
-                  <img className="w-full rounded shadow-md" src={image} alt={image} />
+                <div className="border bg-foreground/15 p-5 md:p-8" key={index}>
+                  <img className="w-full" src={image} alt={image} />
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-row justify-between pt-12 pl-3 pr-1">
+            <div className="w-full flex flex-row justify-between pt-20 pl-3 pr-1">
               <div>
                 {index > 0 && (
                   <Link className="flex flex-row items-center gap-5" to={`/project/${Projects[index - 1].projectUrl}`}>
