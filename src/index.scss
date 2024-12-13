@@ -206,3 +206,12 @@ body {
   right: 0;
   background: linear-gradient(to left, rgb(var(--background)), transparent);
 }
+
+.slideshow-image {
+  max-height: calc(100% - 140px);
+  max-width: calc(100% - 2.5rem);
+}
+
+button:disabled {
+  opacity: 0.25;
+}

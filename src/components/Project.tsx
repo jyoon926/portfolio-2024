@@ -3,6 +3,7 @@ import { Projects } from '../Data';
 import { useEffect, useState } from 'react';
 import { MdArrowBackIos, MdArrowForwardIos, MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
+import Slideshow from './Slideshow';
 
 interface Project {
   projectUrl: string;
@@ -20,6 +21,8 @@ export default function Project() {
   const { projectUrl } = useParams();
   const [project, setProject] = useState<Project>();
   const [index, setIndex] = useState(-1);
+  const [isSlideshowOpen, setIsSlideshowOpen] = useState(false);
+  const [slideshowId, setSlideshowId] = useState(0);
 
   useEffect(() => {
     const proj = Projects.find((project) => project.projectUrl === projectUrl);
@@ -27,8 +30,13 @@ export default function Project() {
     if (proj) setIndex(Projects.indexOf(proj));
   }, [projectUrl]);
 
+  const handlePhotoClick = (id: number) => {
+    setIsSlideshowOpen(true);
+    setSlideshowId(id);
+  };
+
   return (
-    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-28 flex flex-col justify-start items-start gap-10">
+    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-24 flex flex-col justify-start items-start gap-10">
       <Link className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70" to="/">
         <MdArrowBackIos className='text-sm' /> Home
       </Link>
@@ -72,9 +80,9 @@ export default function Project() {
               style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
             >
               {project.images.slice(1).map((image, index) => (
-                <div className="border bg-foreground/15 p-5 md:p-8" key={index}>
+                <button className="border bg-foreground/15 p-5 md:p-8 duration-300 hover:bg-foreground/25" key={index} onClick={() => handlePhotoClick(index + 1)}>
                   <img className="w-full" src={image} alt={image} />
-                </div>
+                </button>
               ))}
             </div>
             <div className="w-full flex flex-row justify-between pt-20 pl-3 pr-1">
@@ -102,6 +110,12 @@ export default function Project() {
               </div>
             </div>
           </div>
+          <Slideshow
+            selected={slideshowId}
+            photos={project.images}
+            isOpen={isSlideshowOpen}
+            onClose={() => setIsSlideshowOpen(false)}
+          />
         </>
       ) : (
         "Project doesn't exist!"

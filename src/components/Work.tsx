@@ -11,7 +11,7 @@ export default function Work() {
       >
         {Projects.map((project, index) => (
           <Link className="flex flex-col gap-3" key={index} to={`/project/${project.projectUrl}`}>
-            <div className='border bg-foreground/15 p-5 md:p-8'>
+            <div className='border duration-300 bg-foreground/15 hover:bg-foreground/25 p-5 md:p-8'>
               <img src={project.images[0]} alt="" />
             </div>
             <div className="grow flex flex-col leading-snug text-nowrap">
