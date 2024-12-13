@@ -28,7 +28,7 @@ export default function Project() {
   }, [projectUrl]);
 
   return (
-    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-3 pb-20 flex flex-col justify-start items-start gap-10">
+    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-28 flex flex-col justify-start items-start gap-10">
       <Link className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70" to="/">
         <MdArrowBackIos className='text-sm' /> Home
       </Link>
@@ -68,7 +68,7 @@ export default function Project() {
               </Link>
             </div>
             <div
-              className="w-full flex flex-col md:grid gap-3"
+              className="w-full flex flex-col md:grid gap-5"
               style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
             >
               {project.images.slice(1).map((image, index) => (
@@ -77,7 +77,7 @@ export default function Project() {
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-row justify-between pt-12 pl-3 pr-1">
+            <div className="w-full flex flex-row justify-between pt-20 pl-3 pr-1">
               <div>
                 {index > 0 && (
                   <Link className="flex flex-row items-center gap-5" to={`/project/${Projects[index - 1].projectUrl}`}>

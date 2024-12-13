@@ -38,7 +38,7 @@ export default function Intro({ onTabClick }: Props) {
 
   return (
     <div className="relative">
-      <div className="min-h-screen w-full flex flex-col items-center p-3 py-32">
+      <div className="min-h-screen w-full flex flex-col items-center p-5 py-32">
         <div className="w-full max-w-[800px] flex flex-col items-start justify-start gap-5 overflow-hidden">
           <div className="w-full relative">
             {/* Gradients */}
