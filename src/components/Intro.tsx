@@ -39,7 +39,7 @@ export default function Intro({ onTabClick }: Props) {
   return (
     <div className="relative">
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
-        <div className="w-full max-w-[800px] flex flex-col items-start justify-start gap-5 overflow-hidden">
+        <div className="w-full max-w-[700px] flex flex-col items-start justify-start gap-5 overflow-hidden">
           <div className="w-full relative">
             {/* Gradients */}
             <div className={`gradient-left ${!showLeftGradient && 'opacity-0'}`}></div>
@@ -62,9 +62,9 @@ export default function Intro({ onTabClick }: Props) {
               ))}
             </div>
           </div>
-          <div className="leading-[1.1] text-2xl sm:text-4xl pb-5">{Intros[currentTab].text}</div>
+          <div className="leading-snug pb-5">{Intros[currentTab].text}</div>
           <p className="leading-snug">
-            As a fourth-year BS/MS student in computer science at RIT, I blend technical expertise with creative vision. My academic foundation is reinforced by real-world experience from two six-month software engineering co-ops at Dassault Systèmes, where I honed my full stack development skills. Drawing from my passion for art and design, I craft digital experiences that seamlessly unite functionality with aesthetics. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.
+            I am a fourth-year BS/MS student in computer science at RIT. My academic foundation is reinforced by real-world experience from two six-month software engineering co-ops at Dassault Systèmes, where I honed my full stack development skills. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.
           </p>
           <div className="flex flex-row gap-5 pb-5">
             <button className="button" onClick={() => onTabClick(1)}>
@@ -74,10 +74,10 @@ export default function Intro({ onTabClick }: Props) {
               Resume <IoArrowDownSharp className="rotate-[-135deg]" />
             </a>
           </div>
-          <img className="w-56 mix-blend-luminosity rounded-md border" src="/headshot.jpg" alt="" />
+          <img className="w-[300px] mix-blend-luminosity" src="/bw-headshot-abstract.jpg" alt="" />
         </div>
       </div>
-      <Star />
+      {/* <Star /> */}
     </div >
   );
 }

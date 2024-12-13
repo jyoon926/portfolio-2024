@@ -62,7 +62,7 @@ function App() {
       const lowerIndex = Math.floor(colorScheme);
       const upperIndex = Math.ceil(colorScheme) % ColorSchemes.length;
       const blendFactor = colorScheme - lowerIndex;
-  
+
       const lowerScheme = ColorSchemes[lowerIndex];
       const upperScheme = ColorSchemes[upperIndex];
       const background = blendColors(lowerScheme.background, upperScheme.background, blendFactor);
@@ -95,7 +95,7 @@ function App() {
   );
 
   return (
-    <div className="text-foreground font-semibold">
+    <div className="text-foreground">
       <ScrollToTop />
       <Loader />
       <Menu

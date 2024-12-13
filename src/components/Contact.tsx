@@ -27,7 +27,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <img className="w-80 rounded-md border mix-blend-luminosity" src="/headshot.jpg" alt="" />
+      <img className="w-80 mix-blend-luminosity" src="/bw-headshot-abstract-2.jpg" alt="" />
     </div>
   );
 }

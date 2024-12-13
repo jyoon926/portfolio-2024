@@ -31,61 +31,6 @@ export const ColorSchemes = [
     background: '107, 96, 84',
     foreground: '255, 255, 255',
   },
-  // {
-  //   name: 'Dark Marine',
-  //   background: '24, 41, 56',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Dark Blue',
-  //   background: '46, 50, 72',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Dark Purple',
-  //   background: '64, 54, 79',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Dark Pink',
-  //   background: '84, 60, 89',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Dark Red',
-  //   background: '119, 58, 53',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Dark Orange',
-  //   background: '157, 68, 51',
-  //   foreground: '255, 255, 255',
-  // },
-  // {
-  //   name: 'Light Orange',
-  //   background: '255, 210, 180',
-  //   foreground: '39, 39, 39',
-  // },
-  // {
-  //   name: 'Light Brown',
-  //   background: '243, 230, 207',
-  //   foreground: '39, 39, 39',
-  // },
-  // {
-  //   name: 'Light Green',
-  //   background: '209, 218, 203',
-  //   foreground: '39, 39, 39',
-  // },
-  // {
-  //   name: 'Light Marine',
-  //   background: '213, 227, 222',
-  //   foreground: '39, 39, 39',
-  // },
-  // {
-  //   name: 'Light Blue',
-  //   background: '218, 229, 232',
-  //   foreground: '39, 39, 39',
-  // },
   {
     name: 'Light Brown',
     background: '209, 199, 186',
@@ -104,7 +49,7 @@ export const ColorSchemes = [
   {
     name: 'Light White',
     background: '255, 255, 255',
-    foreground: '60, 60, 60',
+    foreground: '20, 20, 20',
   },
 ];
 
