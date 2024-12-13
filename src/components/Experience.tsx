@@ -2,7 +2,7 @@ import { Jobs } from '../Data';
 
 export default function Experience() {
   return (
-    <div className="flex flex-col items-start justify-start mx-5 border-t py-32">
+    <div className="flex flex-col items-start justify-start mx-5 border-t py-24">
       <p className="text-4xl text-center mb-12">Experience</p>
       <div className="w-full flex flex-col gap-12">
         {Jobs.map((job, index) => (

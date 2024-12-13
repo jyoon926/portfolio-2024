@@ -3,10 +3,10 @@ import { Projects } from '../Data';
 
 export default function Work() {
   return (
-    <div className="flex flex-col items-start justify-start mx-5 py-32">
+    <div className="flex flex-col items-start justify-start mx-5 py-24">
       <p className="text-4xl mb-10">Latest Projects</p>
       <div
-        className="w-full flex flex-col md:grid gap-5"
+        className="w-full flex flex-col md:grid gap-x-5 gap-y-8"
         style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
       >
         {Projects.map((project, index) => (
