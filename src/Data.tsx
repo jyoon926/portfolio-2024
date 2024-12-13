@@ -90,7 +90,6 @@ export const Projects = [
       '/spotify-spheres-2.png',
       '/spotify-spheres-3.png',
       '/spotify-spheres-4.png',
-      '/spotify-spheres-5.png',
     ],
     link: 'https://spotifyspheres.web.app/',
     github: 'https://github.com/jyoon926/spotify-spheres',
