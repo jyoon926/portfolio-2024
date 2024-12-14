@@ -194,7 +194,7 @@ export const Education = {
   date: 'August 2021 — May 2026',
   bullets: [
     'Cumulative GPA: 3.88/4.0',
-    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Database Management, AI, Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory'
+    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory'
   ]
 };
 
