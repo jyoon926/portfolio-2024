@@ -58,7 +58,7 @@ export const ColorSchemes = [
 export const Intros = [
   {
     label: 'For Anyone',
-    text: "Hello there! I'm a software engineer who cares about making beautiful digital products that help people.",
+    text: "Hi! I'm a software engineer who cares about making beautiful and impactful digital products.",
   },
   {
     label: 'Recruiters',
