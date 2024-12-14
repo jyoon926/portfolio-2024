@@ -6,7 +6,7 @@ interface Props {
   onTabClick: (index: number) => void;
 }
 
-export default function Intro({ onTabClick }: Props) {
+export default function IntroSection({ onTabClick }: Props) {
   const [currentTab, setCurrentTab] = useState(0);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
   const [showRightGradient, setShowRightGradient] = useState(false);

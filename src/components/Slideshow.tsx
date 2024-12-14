@@ -79,9 +79,8 @@ export default function Slideshow({ photos, selected, isOpen, onClose }: Props) 
   return (
     <div
       ref={containerRef}
-      className={`fixed inset-0 flex items-center justify-center z-50 bg-background/50 backdrop-blur transition-opacity duration-200 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className={`fixed inset-0 flex items-center justify-center z-50 bg-background/50 backdrop-blur transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
     >
       {/* Photos */}
       {photos.map((photo, index) => (
@@ -96,7 +95,7 @@ export default function Slideshow({ photos, selected, isOpen, onClose }: Props) 
 
       {/* Close */}
       <button
-        className="absolute top-0 right-0 m-3 p-2 rounded-full text-xl duration-300 border hover:bg-foreground/10"
+        className="absolute top-0 right-0 m-5 p-2 rounded-full text-xl duration-300 border hover:bg-foreground/10"
         onClick={handleClose}
       >
         <MdClose />
@@ -104,7 +103,7 @@ export default function Slideshow({ photos, selected, isOpen, onClose }: Props) 
 
       {/* Controls */}
       <div className="absolute bottom-0 flex flex-row items-center justify-center">
-        <button className="text-3xl p-5 rounded-full" onClick={() => setId(id - 1)} disabled={id === 0}>
+        <button className="text-2xl p-6 rounded-full" onClick={() => setId(id - 1)} disabled={id === 0}>
           <MdChevronLeft />
         </button>
         <div className="flex flex-row gap-2 bg-foreground/10 p-2 rounded-full">

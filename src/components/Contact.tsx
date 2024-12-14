@@ -1,4 +1,6 @@
-export default function Contact() {
+import { Contact } from "../Data";
+
+export default function ContactSection() {
   return (
     <div className="flex flex-col md:flex-row mx-5 py-5 gap-5 border-t">
       <div className="grow flex flex-col justify-between gap-5">
@@ -15,16 +17,12 @@ export default function Contact() {
             you!
           </p>
         </div>
-        <div className="flex flex-row gap-10">
-          <a className="border-b pb-0.5" href="mailto:jy9726@rit.edu">
-            jy9726@rit.edu
-          </a>
-          <a className="border-b pb-0.5" href="https://www.linkedin.com/in/jaacobyoon/" target="_blank">
-            LinkedIn
-          </a>
-          <a className="border-b pb-0.5" href="https://github.com/jyoon926/" target="_blank">
-            GitHub
-          </a>
+        <div className="flex flex-row gap-8">
+          {Contact.links.map((link) => (
+            <a className="border-b pb-0.5" href={link.url} target="_blank" key={link.url}>
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
       <img className="w-80 mix-blend-luminosity" src="/bw-headshot-abstract-2.jpg" alt="" />

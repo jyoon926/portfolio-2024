@@ -1,13 +1,15 @@
-import Contact from './components/Contact';
-import Experience from './components/Experience';
-import Intro from './components/Intro';
-import Work from './components/Work';
+import ContactSection from './components/Contact';
+import EducationSection from './components/Education';
+import ExperienceSection from './components/Experience';
+import IntroSection from './components/Intro';
+import ProjectsSection from './components/Projects';
 
 export const Sections = [
-  { title: 'Intro', component: Intro },
-  { title: 'Projects', component: Work },
-  { title: 'Experience', component: Experience },
-  { title: 'Contact', component: Contact },
+  { title: 'Intro', component: IntroSection },
+  { title: 'Projects', component: ProjectsSection },
+  { title: 'Experience', component: ExperienceSection },
+  { title: 'Education', component: EducationSection },
+  { title: 'Contact', component: ContactSection },
 ];
 
 export const ColorSchemes = [
@@ -90,6 +92,7 @@ export const Projects = [
       '/spotify-spheres-2.png',
       '/spotify-spheres-3.png',
       '/spotify-spheres-4.png',
+      '/spotify-spheres-5.png',
     ],
     link: 'https://spotifyspheres.web.app/',
     github: 'https://github.com/jyoon926/spotify-spheres',
@@ -153,7 +156,7 @@ export const Projects = [
   },
 ];
 
-export const Jobs = [
+export const Experience = [
   {
     company: 'Epic Systems',
     role: 'Software Engineering Intern',
@@ -183,3 +186,35 @@ export const Jobs = [
       'I assisted 24 students taking CSCI-140 (CS for AP Students) with lab assignments and problem-solving sessions, providing support in Python and Java to teach key computer science concepts. Additionally, I mentored over 100 intro-level CS students at the GCCIS Tutoring Center.',
   },
 ];
+
+export const Education = {
+  school: 'Rochester Institute of Technology',
+  degree: 'Combined Bachelor of Science and Master of Science in Computer Science',
+  location: 'Rochester, NY',
+  date: 'August 2021 — May 2026',
+  bullets: [
+    'Cumulative GPA: 3.88/4.0',
+    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Database Management, AI, Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory'
+  ]
+};
+
+export const Contact = {
+  links: [
+    {
+      url: 'mailto:jy9726@rit.edu',
+      text: 'jy9726@rit.edu'
+    },
+    {
+      url: 'https://www.linkedin.com/in/jaacobyoon/',
+      text: 'LinkedIn'
+    },
+    {
+      url: 'https://github.com/jyoon926/',
+      text: 'GitHub'
+    },
+    {
+      url: 'https://www.instagram.com/jaacobyoon/',
+      text: 'Instagram'
+    }
+  ]
+}

@@ -16,7 +16,7 @@ function App() {
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
-    const offset = windowHeight / 2;
+    const offset = windowHeight * 0.6;
 
     for (let i = 0; i < sectionRefs.current.length; i++) {
       const section = sectionRefs.current[i];

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Projects } from '../Data';
 
-export default function Work() {
+export default function ProjectsSection() {
   return (
     <div className="border-t flex flex-col items-start justify-start mx-5 py-24">
       <p className="text-4xl mb-10">Latest Projects</p>
