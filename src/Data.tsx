@@ -84,7 +84,7 @@ export const Projects = [
     title: 'Spotify Spheres',
     caption: 'React, Tailwind CSS, Spotify Web API, OpenAI API',
     date: 'November 2024 - Present',
-    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Spotify Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each "sphere" begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I’ve developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. This approach gives users a unique, intentional way to shape and explore their listening experience. Looking ahead, I plan to integrate the app with a secure database so users can create and manage multiple spheres. Additionally, I aim to incorporate OpenAI’s API to automatically generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
+    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Spotify Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each 'sphere' begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I've developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. Recently, I connected the app to a Firestore database, enabling users to create and manage their spheres seamlessly. This improvement allows users to save their progress and return to their personalized music exploration anytime. Looking ahead, I plan to incorporate OpenAI's API to generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
     technologies: ['React', 'Tailwind CSS', 'Spotify Web API', 'Firebase', 'OpenAI API'],
     images: [
       '/spotify-spheres.png',
@@ -183,7 +183,7 @@ export const Experience = [
     role: 'Student Lab Instructor',
     date: 'August 2022 — December 2022',
     description:
-      'I assisted 24 students taking CSCI-140 (CS for AP Students) with lab assignments and problem-solving sessions, providing support in Python and Java to teach key computer science concepts. Additionally, I mentored over 100 intro-level CS students at the GCCIS Tutoring Center.',
+      'I assisted 24 students taking CSCI-140 (CS for AP Students) with lab assignments and problem-solving sessions, providing support in Python and Java to teach key computer science concepts. Additionally, I tutored over 100 intro-level CS students at the GCCIS Tutoring Center.',
   },
 ];
 
