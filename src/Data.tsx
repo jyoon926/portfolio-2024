@@ -80,11 +80,11 @@ export const Intros = [
 
 export const Projects = [
   {
-    projectUrl: 'spotify-spheres',
-    title: 'Spotify Spheres',
+    projectUrl: 'audio-spheres',
+    title: 'Audio Spheres',
     caption: 'React, Tailwind CSS, Spotify Web API, OpenAI API',
     date: 'November 2024 - Present',
-    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Spotify Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each 'sphere' begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I've developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. Recently, I connected the app to a Firestore database, enabling users to create and manage their spheres seamlessly. This improvement allows users to save their progress and return to their personalized music exploration anytime. Looking ahead, I plan to incorporate OpenAI's API to generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
+    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Audio Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each 'sphere' begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I've developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. Recently, I connected the app to a Firestore database, enabling users to create and manage their spheres seamlessly. This improvement allows users to save their progress and return to their personalized music exploration anytime. Looking ahead, I plan to incorporate OpenAI's API to generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
     technologies: ['React', 'Tailwind CSS', 'Spotify Web API', 'Firebase', 'OpenAI API'],
     images: [
       '/spotify-spheres.png',
@@ -94,8 +94,8 @@ export const Projects = [
       '/spotify-spheres-4.png',
       '/spotify-spheres-5.png',
     ],
-    link: 'https://spotifyspheres.web.app/',
-    github: 'https://github.com/jyoon926/spotify-spheres',
+    link: 'https://audio-spheres.web.app/',
+    github: 'https://github.com/jyoon926/audio-spheres',
   },
   {
     projectUrl: 'models-at-rit',
