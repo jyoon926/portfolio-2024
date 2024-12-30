@@ -3,10 +3,6 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.scss';
 import { BrowserRouter } from 'react-router-dom';
-import app from './FirebaseConfig.ts';
-import { getAnalytics } from 'firebase/analytics';
-
-getAnalytics(app);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
