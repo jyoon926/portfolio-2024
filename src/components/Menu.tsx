@@ -36,7 +36,7 @@ export default function Menu({ currentSection, onTabClick }: Props) {
       </div>
       <div className={`fixed inset-0 z-20 bg-background/70 backdrop-blur-lg flex flex-col justify-start items-start text-2xl gap-1 px-5 py-20 duration-300 ${showMenu ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         {Sections.map((section, index) => (
-          <button className={index !== currentSection ? 'opacity-50' : ''} onClick={() => {
+          <button className={index !== currentSection ? 'opacity-50' : ''} key={index} onClick={() => {
             handleTabClick(index);
             setShowMenu(false);
           }}>
