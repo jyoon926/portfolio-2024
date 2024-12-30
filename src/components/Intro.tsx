@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Intros } from '../Data';
+import { Intros } from '../utils/Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
 
 interface Props {

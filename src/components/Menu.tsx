@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sections } from '../Data';
+import { Sections } from '../utils/Data';
 
 interface Props {
   currentSection: number;

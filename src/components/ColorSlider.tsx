@@ -1,5 +1,5 @@
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
-import { ColorSchemes } from '../Data';
+import { ColorSchemes } from '../utils/Data';
 
 interface Props {
   colorScheme: number;

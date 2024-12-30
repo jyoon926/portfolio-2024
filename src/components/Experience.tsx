@@ -1,4 +1,4 @@
-import { Experience } from '../Data';
+import { Experience } from '../utils/Data';
 
 export default function ExperienceSection() {
   return (

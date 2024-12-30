@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import './App.scss';
 import Menu from './components/Menu';
-import { ColorSchemes, Sections } from './Data';
+import { ColorSchemes, Sections } from './utils/Data';
 import Loader from './components/Loader';
 import { Route, Routes } from 'react-router-dom';
 import Project from './components/Project';

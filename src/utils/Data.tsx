@@ -1,8 +1,8 @@
-import ContactSection from './components/Contact';
-import EducationSection from './components/Education';
-import ExperienceSection from './components/Experience';
-import IntroSection from './components/Intro';
-import ProjectsSection from './components/Projects';
+import ContactSection from '../components/Contact';
+import EducationSection from '../components/Education';
+import ExperienceSection from '../components/Experience';
+import IntroSection from '../components/Intro';
+import ProjectsSection from '../components/Projects';
 
 export const Sections = [
   { title: 'Intro', component: IntroSection },

@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
-import { Projects } from '../Data';
+import { Projects } from '../utils/Data';
 import { useEffect, useState } from 'react';
 import { MdArrowBackIos, MdArrowForwardIos, MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import Slideshow from './Slideshow';
+import useDocumentTitle from '../utils/useDocumentTitle';
 
 interface Project {
   projectUrl: string;
@@ -34,6 +35,8 @@ export default function Project() {
     setIsSlideshowOpen(true);
     setSlideshowId(id);
   };
+
+  useDocumentTitle(`Project — ${project?.title}`);
 
   return (
     <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-24 flex flex-col justify-start items-start gap-10">

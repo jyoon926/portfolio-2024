@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Projects } from '../Data';
+import { Projects } from '../utils/Data';
 
 export default function ProjectsSection() {
   return (
