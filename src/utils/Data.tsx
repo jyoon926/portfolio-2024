@@ -12,6 +12,7 @@ import { PiCubeTransparent } from 'react-icons/pi';
 import { IoGameController } from 'react-icons/io5';
 import { GiClarinet, GiGuitar, GiSewingMachine, GiStoneBlock } from 'react-icons/gi';
 import { IoMdMusicalNotes } from 'react-icons/io';
+import { HiDatabase } from 'react-icons/hi';
 
 export const Sections = [
   { title: 'Intro', component: IntroSection },
@@ -223,7 +224,7 @@ export const Skills = {
         { name: 'C', icon: <SiC /> },
         { name: 'C++', icon: <SiCplusplus /> },
         { name: 'HTML/CSS', icon: <BiLogoHtml5 /> },
-        { name: 'SQL', icon: <BiLogoPostgresql /> },
+        { name: 'SQL', icon: <HiDatabase /> },
       ]
     },
     {
@@ -240,7 +241,7 @@ export const Skills = {
       ]
     },
     {
-      name: 'Machine Learning & Data Science',
+      name: 'AI/ML',
       skills: [
         { name: 'TensorFlow', icon: <SiTensorflow /> },
         { name: 'PyTorch', icon: <SiPytorch /> },
@@ -267,7 +268,7 @@ export const Skills = {
       ]
     },
     {
-      name: 'Interests / Hobbies',
+      name: 'Interests/Hobbies',
       skills: [
         { name: 'Web Development', icon: <MdComputer /> },
         { name: 'Game Development', icon: <IoGameController /> },
