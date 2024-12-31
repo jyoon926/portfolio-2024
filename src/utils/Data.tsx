@@ -6,11 +6,11 @@ import IntroSection from '../components/Intro';
 import ProjectsSection from '../components/Projects';
 import SkillsSection from '../components/Skills';
 import { SiC, SiCplusplus, SiCsharp, SiDotnet, SiExpress, SiFigma, SiFirebase, SiHuggingface, SiJenkins, SiMariadb, SiMongodb, SiMysql, SiNumpy, SiOracle, SiPandas, SiPostman, SiPytorch, SiSupabase, SiTensorflow } from 'react-icons/si';
-import { RiCamera3Fill, RiNextjsFill } from 'react-icons/ri';
+import { RiCamera3Fill, RiNextjsFill, RiPenNibFill } from 'react-icons/ri';
 import { MdComputer } from 'react-icons/md';
 import { PiCubeTransparent } from 'react-icons/pi';
-import { IoGameController } from 'react-icons/io5';
-import { GiClarinet, GiGuitar, GiSewingMachine, GiStoneBlock } from 'react-icons/gi';
+import { IoCameraSharp, IoGameController, IoMusicalNotes } from 'react-icons/io5';
+import { GiClarinet, GiGuitar, GiSewingMachine, GiSewingNeedle, GiStoneBlock } from 'react-icons/gi';
 import { IoMdMusicalNotes } from 'react-icons/io';
 import { HiDatabase } from 'react-icons/hi';
 
@@ -272,13 +272,14 @@ export const Skills = {
       skills: [
         { name: 'Web Development', icon: <MdComputer /> },
         { name: 'Game Development', icon: <IoGameController /> },
+        { name: 'Graphic Design', icon: <RiPenNibFill /> },
         { name: '3D Art', icon: <PiCubeTransparent /> },
-        { name: 'Fashion', icon: <GiSewingMachine /> },
-        { name: 'Music Production', icon: <IoMdMusicalNotes /> },
+        { name: 'Fashion', icon: <GiSewingNeedle /> },
+        { name: 'Music Production', icon: <IoMusicalNotes /> },
         { name: 'Rock Climbing', icon: <GiStoneBlock /> },
         { name: 'Oboe', icon: <GiClarinet /> },
         { name: 'Guitar', icon: <GiGuitar /> },
-        { name: 'Photography', icon: <RiCamera3Fill /> },
+        { name: 'Photography', icon: <IoCameraSharp /> },
       ]
     }
   ]
