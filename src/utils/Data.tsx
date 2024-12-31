@@ -1,14 +1,25 @@
+import { BiLogoAngular, BiLogoAws, BiLogoDocker, BiLogoHtml5, BiLogoJava, BiLogoJavascript, BiLogoNodejs, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoSpringBoot, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi';
 import ContactSection from '../components/Contact';
 import EducationSection from '../components/Education';
 import ExperienceSection from '../components/Experience';
 import IntroSection from '../components/Intro';
 import ProjectsSection from '../components/Projects';
+import SkillsSection from '../components/Skills';
+import { SiC, SiCplusplus, SiCsharp, SiDotnet, SiExpress, SiFigma, SiFirebase, SiHuggingface, SiJenkins, SiMariadb, SiMongodb, SiMysql, SiNumpy, SiOracle, SiPandas, SiPostman, SiPytorch, SiSupabase, SiTensorflow } from 'react-icons/si';
+import { RiCamera3Fill, RiNextjsFill } from 'react-icons/ri';
+import { MdComputer } from 'react-icons/md';
+import { PiCubeTransparent } from 'react-icons/pi';
+import { IoGameController } from 'react-icons/io5';
+import { GiClarinet, GiGuitar, GiSewingMachine, GiStoneBlock } from 'react-icons/gi';
+import { IoMdMusicalNotes } from 'react-icons/io';
 
 export const Sections = [
   { title: 'Intro', component: IntroSection },
   { title: 'Projects', component: ProjectsSection },
   { title: 'Experience', component: ExperienceSection },
   { title: 'Education', component: EducationSection },
+  { title: 'Skills', component: SkillsSection },
+  // { title: 'Creative Works', component: CreativeWorksSection },
   { title: 'Contact', component: ContactSection },
 ];
 
@@ -87,12 +98,12 @@ export const Projects = [
     description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Audio Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each 'sphere' begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I've developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. Recently, I connected the app to a Firestore database, enabling users to create and manage their spheres seamlessly. This improvement allows users to save their progress and return to their personalized music exploration anytime. Looking ahead, I plan to incorporate OpenAI's API to generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
     technologies: ['React', 'Tailwind CSS', 'Spotify Web API', 'Firebase', 'OpenAI API'],
     images: [
-      '/spotify-spheres.png',
-      '/spotify-spheres-1.png',
-      '/spotify-spheres-2.png',
-      '/spotify-spheres-3.png',
-      '/spotify-spheres-4.png',
-      '/spotify-spheres-5.png',
+      '/projects/spotify-spheres.png',
+      '/projects/spotify-spheres-1.png',
+      '/projects/spotify-spheres-2.png',
+      '/projects/spotify-spheres-3.png',
+      '/projects/spotify-spheres-4.png',
+      '/projects/spotify-spheres-5.png',
     ],
     link: 'https://audio-spheres.web.app/',
     github: 'https://github.com/jyoon926/audio-spheres',
@@ -106,14 +117,14 @@ export const Projects = [
       'Models @ RIT is a platform designed to connect photographers with aspiring models within the RIT community. Photography students often face challenges finding models for their projects, while many students who want to model lack the necessary connections. This website streamlines that process, allowing anyone with an rit.edu email to create a model profile and be discovered by photographers. It serves as a valuable resource for both photographers seeking fresh faces and students aspiring to break into modeling.',
     technologies: ['React', 'Supabase', 'Tailwind CSS', 'Firebase'],
     images: [
-      '/models-at-rit.png',
-      '/models-at-rit-1.png',
-      '/models-at-rit-2.png',
-      '/models-at-rit-3.png',
-      '/models-at-rit-4.png',
-      '/models-at-rit-5.png',
-      '/models-at-rit-6.png',
-      '/models-at-rit-7.png',
+      '/projects/models-at-rit.png',
+      '/projects/models-at-rit-1.png',
+      '/projects/models-at-rit-2.png',
+      '/projects/models-at-rit-3.png',
+      '/projects/models-at-rit-4.png',
+      '/projects/models-at-rit-5.png',
+      '/projects/models-at-rit-6.png',
+      '/projects/models-at-rit-7.png',
     ],
     link: 'https://modelsatrit.com/',
     github: 'https://github.com/jyoon926/modelsatrit',
@@ -127,12 +138,12 @@ export const Projects = [
       'This art gallery website was created for a client to showcase the paintings of Chris Elliott, who passed away in 2022. I worked closely with the client using Figma to ensure we shared a unified vision for the site, blending their ideas with my design expertise.',
     technologies: ['React', 'Supabase', 'Tailwind CSS', 'Figma'],
     images: [
-      '/chris-elliott.png',
-      '/chris-elliott-1.png',
-      '/chris-elliott-3.png',
-      '/chris-elliott-2.png',
-      '/chris-elliott-4.png',
-      '/chris-elliott-5.png',
+      '/projects/chris-elliott.png',
+      '/projects/chris-elliott-1.png',
+      '/projects/chris-elliott-3.png',
+      '/projects/chris-elliott-2.png',
+      '/projects/chris-elliott-4.png',
+      '/projects/chris-elliott-5.png',
     ],
     link: 'https://chris-elliott.web.app/',
     github: 'https://github.com/jyoon926/chris-elliott',
@@ -146,10 +157,10 @@ export const Projects = [
       "Inspired Playlists was a personal project designed to explore the potential of the Spotify Web API and the Cohere API (LLM). I was intrigued by how Spotify's recommendation algorithms, like those behind 'Discover Weekly,' 'Daylist,' and features like DJ and suggested songs, often felt like an echo chamber—reinforcing familiar tastes and making it harder to discover fresh music. I built this website to break that pattern, offering a more intentional and liberating way to discover new artists and songs.",
     technologies: ['Angular', 'Firebase', 'Cohere API'],
     images: [
-      '/inspired-playlists.png',
-      '/inspired-playlists-1.png',
-      '/inspired-playlists-2.png',
-      '/inspired-playlists-3.png',
+      '/projects/inspired-playlists.png',
+      '/projects/inspired-playlists-1.png',
+      '/projects/inspired-playlists-2.png',
+      '/projects/inspired-playlists-3.png',
     ],
     link: 'https://inspiredplaylists.web.app/',
     github: 'https://github.com/jyoon926/spotify-playlist-creator',
@@ -194,9 +205,114 @@ export const Education = {
   date: 'August 2021 — May 2026',
   bullets: [
     'Cumulative GPA: 3.88/4.0',
-    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory'
+    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
+    'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)'
   ]
 };
+
+export const Skills = {
+  sections: [
+    {
+      name: 'Programming Languages',
+      skills: [
+        { name: 'TypeScript', icon: <BiLogoTypescript /> },
+        { name: 'JavaScript', icon: <BiLogoJavascript /> },
+        { name: 'Python', icon: <BiLogoPython /> },
+        { name: 'Java', icon: <BiLogoJava /> },
+        { name: 'C#', icon: <SiCsharp /> },
+        { name: 'C', icon: <SiC /> },
+        { name: 'C++', icon: <SiCplusplus /> },
+        { name: 'HTML/CSS', icon: <BiLogoHtml5 /> },
+        { name: 'SQL', icon: <BiLogoPostgresql /> },
+      ]
+    },
+    {
+      name: 'Web Development',
+      skills: [
+        { name: 'React', icon: <BiLogoReact /> },
+        { name: 'Next.js', icon: <RiNextjsFill /> },
+        { name: 'Angular', icon: <BiLogoAngular /> },
+        { name: '.NET', icon: <SiDotnet /> },
+        { name: 'Node.js', icon: <BiLogoNodejs /> },
+        { name: 'Express', icon: <SiExpress /> },
+        { name: 'Tailwind CSS', icon: <BiLogoTailwindCss /> },
+        { name: 'Spring', icon: <BiLogoSpringBoot /> },
+      ]
+    },
+    {
+      name: 'Machine Learning & Data Science',
+      skills: [
+        { name: 'TensorFlow', icon: <SiTensorflow /> },
+        { name: 'PyTorch', icon: <SiPytorch /> },
+        { name: 'Hugging Face', icon: <SiHuggingface /> },
+        { name: 'NumPy', icon: <SiNumpy /> },
+        { name: 'Pandas', icon: <SiPandas /> },
+      ]
+    },
+    {
+      name: 'Tools',
+      skills: [
+        { name: 'Supabase', icon: <SiSupabase /> },
+        { name: 'Firebase', icon: <SiFirebase /> },
+        { name: 'AWS', icon: <BiLogoAws /> },
+        { name: 'Docker', icon: <BiLogoDocker /> },
+        { name: 'Jenkins', icon: <SiJenkins /> },
+        { name: 'Postman', icon: <SiPostman /> },
+        { name: 'PostgreSQL', icon: <BiLogoPostgresql /> },
+        { name: 'Oracle', icon: <SiOracle /> },
+        { name: 'MariaDB', icon: <SiMariadb /> },
+        { name: 'MongoDB', icon: <SiMongodb /> },
+        { name: 'MySQL', icon: <SiMysql /> },
+        { name: 'Figma', icon: <SiFigma /> },
+      ]
+    },
+    {
+      name: 'Interests / Hobbies',
+      skills: [
+        { name: 'Web Development', icon: <MdComputer /> },
+        { name: 'Game Development', icon: <IoGameController /> },
+        { name: '3D Art', icon: <PiCubeTransparent /> },
+        { name: 'Fashion', icon: <GiSewingMachine /> },
+        { name: 'Music Production', icon: <IoMdMusicalNotes /> },
+        { name: 'Rock Climbing', icon: <GiStoneBlock /> },
+        { name: 'Oboe', icon: <GiClarinet /> },
+        { name: 'Guitar', icon: <GiGuitar /> },
+        { name: 'Photography', icon: <RiCamera3Fill /> },
+      ]
+    }
+  ]
+}
+
+export const CreativeWorks = [
+  {
+    caption: 'Beyond Fashion 2024',
+    image: '/creative-works/beyond-fashion-2024-1.jpg',
+  },
+  {
+    caption: 'Beyond Fashion 2024',
+    image: '/creative-works/beyond-fashion-2024-2.jpeg',
+  },
+  {
+    caption: 'Beyond Fashion 2024',
+    image: '/creative-works/beyond-fashion-2024-3.jpg',
+  },
+  {
+    caption: 'Beyond Fashion 2023',
+    image: '/creative-works/beyond-fashion-2023-1.jpeg',
+  },
+  {
+    caption: 'Beyond Fashion 2024',
+    image: '/creative-works/beyond-fashion-2023-2.jpeg',
+  },
+  {
+    caption: 'Line Woman',
+    image: '/creative-works/line-woman.jpg',
+  },
+  {
+    caption: 'Disassociation',
+    image: '/creative-works/disassociation.jpg',
+  },
+]
 
 export const Contact = {
   links: [
