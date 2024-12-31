@@ -6,12 +6,11 @@ import IntroSection from '../components/Intro';
 import ProjectsSection from '../components/Projects';
 import SkillsSection from '../components/Skills';
 import { SiC, SiCplusplus, SiCsharp, SiDotnet, SiExpress, SiFigma, SiFirebase, SiHuggingface, SiJenkins, SiMariadb, SiMongodb, SiMysql, SiNumpy, SiOracle, SiPandas, SiPostman, SiPytorch, SiSupabase, SiTensorflow } from 'react-icons/si';
-import { RiCamera3Fill, RiNextjsFill, RiPenNibFill } from 'react-icons/ri';
+import { RiNextjsFill, RiPenNibFill } from 'react-icons/ri';
 import { MdComputer } from 'react-icons/md';
 import { PiCubeTransparent } from 'react-icons/pi';
 import { IoCameraSharp, IoGameController, IoMusicalNotes } from 'react-icons/io5';
-import { GiClarinet, GiGuitar, GiSewingMachine, GiSewingNeedle, GiStoneBlock } from 'react-icons/gi';
-import { IoMdMusicalNotes } from 'react-icons/io';
+import { GiClarinet, GiGuitar, GiSewingNeedle, GiStoneBlock } from 'react-icons/gi';
 import { HiDatabase } from 'react-icons/hi';
 
 export const Sections = [
