@@ -11,8 +11,8 @@ export default function SkillsSection() {
               <p>{section.name}</p>
               <div className="flex flex-row gap-x-5 gap-y-2 flex-wrap opacity-50">
                 {section.skills.map((skill) => (
-                  <div className="flex flex-row items-center justify-start gap-1 leading-none" key={skill.name}>
-                    <span className="text-2xl">{skill.icon}</span>
+                  <div className="flex flex-row items-center justify-start gap-1.5 leading-none" key={skill.name}>
+                    <span className="text-xl">{skill.icon}</span>
                     <span className="pt-0.5">{skill.name}</span>
                   </div>
                 ))}
