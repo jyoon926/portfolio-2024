@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Intros } from '../utils/Data';
+import { Intro } from '../utils/Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
 
 interface Props {
@@ -35,37 +35,39 @@ export default function IntroSection({ onTabClick }: Props) {
     }
   }, []);
 
+  const handleTabClick = (index: number) => {
+    setCurrentTab(index);
+  };
+
   return (
     <div className="relative">
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
-        <div className="w-full max-w-[700px] flex flex-col items-start justify-start gap-5 overflow-hidden">
-          <div className="w-full relative">
+        <div className="w-full max-w-[800px] flex flex-col items-start justify-start overflow-hidden">
+          {/* Tabs */}
+          <div className="w-full relative pb-5">
             {/* Gradients */}
             <div className={`gradient-left ${!showLeftGradient && 'opacity-0'}`}></div>
             <div className={`gradient-right ${!showRightGradient && 'opacity-0'}`}></div>
-            {/* Tabs */}
             <div
               ref={tabContainerRef}
               className="flex flex-row gap-1 text-nowrap overflow-x-auto overflow-y-hidden scrollbar-hidden"
             >
-              {Intros.map((intro, index) => (
+              {Intro.intros.map((intro, index) => (
                 <div key={index}>
                   <button
                     className={`pr-1 whitespace-nowrap transition-opacity hover:opacity-100 ${currentTab !== index && 'opacity-50'}`}
-                    onClick={() => setCurrentTab(index)}
+                    onClick={() => handleTabClick(index)}
                   >
                     {intro.label}
                   </button>
-                  {index < Intros.length - 1 && <span className="opacity-50">/</span>}
+                  {index < Intro.intros.length - 1 && <span className="opacity-50">/</span>}
                 </div>
               ))}
             </div>
           </div>
-          <div className="leading-snug pb-5">{Intros[currentTab].text}</div>
-          <p className="leading-snug">
-            I am a fourth-year BS/MS student in computer science at RIT. My academic foundation is reinforced by real-world experience from two six-month software engineering co-ops at Dassault Systèmes, where I honed my full stack development skills. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.
-          </p>
-          <div className="flex flex-row gap-5 pb-5">
+          <div className="leading-snug pb-10">{Intro.intros[currentTab].text}</div>
+          <p className="leading-snug pb-10">{Intro.bio}</p>
+          <div className="flex flex-row gap-5 pb-10">
             <button className="button" onClick={() => onTabClick(1)}>
               View Projects <IoArrowDownSharp />
             </button>
@@ -73,7 +75,7 @@ export default function IntroSection({ onTabClick }: Props) {
               Resume <IoArrowDownSharp className="rotate-[-135deg]" />
             </a>
           </div>
-          <img className="w-[300px] mix-blend-luminosity" src="/bw-headshot-abstract.jpg" alt="" />
+          <img className="w-[300px] mix-blend-luminosity" src="/bw-headshot-abstract.jpg" alt="An abstract portrait of Jacob Yoon. Shot by Sam Su." />
         </div>
       </div>
       {/* <Star /> */}

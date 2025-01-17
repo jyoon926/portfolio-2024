@@ -50,7 +50,7 @@ export default function Project() {
             <p className="text-4xl text-center">{project.title}</p>
             <p className="text-center">{project.date}</p>
             <button className="my-10 lg:w-3/4 border bg-foreground/15 p-5 lg:p-10 duration-300 hover:bg-foreground/25" onClick={() => handlePhotoClick(0)}>
-              <img className="w-full" src={project.images[0]} alt="" />
+              <img className="w-full" src={project.images[0]} alt={`Main project image for '${project.title}'.`} />
             </button>
             <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-50">About</p>
@@ -84,7 +84,7 @@ export default function Project() {
             >
               {project.images.slice(1).map((image, index) => (
                 <button className="border bg-foreground/15 p-5 md:p-8 duration-300 hover:bg-foreground/25" key={index} onClick={() => handlePhotoClick(index + 1)}>
-                  <img className="w-full" src={image} alt={image} />
+                  <img className="w-full" src={image} alt={`Project image for '${project.title}'.`} />
                 </button>
               ))}
             </div>

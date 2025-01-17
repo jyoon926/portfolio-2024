@@ -12,7 +12,7 @@ export default function ProjectsSection() {
         {Projects.map((project, index) => (
           <Link className="flex flex-col gap-3" key={index} to={`/project/${project.projectUrl}`}>
             <div className='border duration-300 bg-foreground/15 hover:bg-foreground/25 p-5 md:p-8'>
-              <img src={project.images[0]} alt="" />
+              <img src={project.images[0]} alt={`Project thumbnail for '${project.title}'`} />
             </div>
             <div className="grow flex flex-col leading-snug text-nowrap">
               <p>{project.title}</p>

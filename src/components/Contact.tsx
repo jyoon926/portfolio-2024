@@ -25,7 +25,7 @@ export default function ContactSection() {
           ))}
         </div>
       </div>
-      <img className="w-80 mix-blend-luminosity" src="/bw-headshot-abstract-2.jpg" alt="" />
+      <img className="w-80 mix-blend-luminosity" src="/bw-headshot-abstract-2.jpg" alt="An abstract portrait of Jacob Yoon. Shot by Sam Su." />
     </div>
   );
 }

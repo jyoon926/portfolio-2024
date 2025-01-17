@@ -66,28 +66,31 @@ export const ColorSchemes = [
   },
 ];
 
-export const Intros = [
-  {
-    label: 'For Anyone',
-    text: "Hi! I'm a software engineer who cares about making beautiful and impactful digital products.",
-  },
-  {
-    label: 'Recruiters',
-    text: "I'm a passionate software engineer who thrives on continuous learning and excels at combining technical expertise and creativity to build beautiful and impactful digital products.",
-  },
-  {
-    label: 'Engineers',
-    text: "I'm a full-stack engineer with a passion for elegant solutions, beautiful systems, clean code, and innovative tech. Let's collaborate on pushing the boundaries of what's possible with code.",
-  },
-  {
-    label: 'Product Managers',
-    text: "I'm a developer who understands both sides of the coin—tech and user experience. I love working on cross-functional teams to design and build products that align with vision and functionality.",
-  },
-  {
-    label: 'Creatives',
-    text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique, visually stunning digital experiences. Let's collaborate!",
-  },
-];
+export const Intro = {
+  intros: [
+    {
+      label: 'For Anyone',
+      text: "Hi! I am a software engineer who cares about making beautiful and impactful digital products.",
+    },
+    {
+      label: 'Recruiters',
+      text: "I'm a passionate software engineer who thrives on continuous learning and excels at combining technical expertise and creativity to build beautiful and impactful digital products.",
+    },
+    {
+      label: 'Engineers',
+      text: "I'm a full-stack engineer with a passion for elegant solutions, beautiful systems, clean code, and innovative tech. Let's collaborate on pushing the boundaries of what's possible with code.",
+    },
+    {
+      label: 'Product Managers',
+      text: "I'm a developer who understands both sides of the coin—tech and user experience. I love working on cross-functional teams to design and build products that align with vision and functionality.",
+    },
+    {
+      label: 'Creatives',
+      text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique, visually stunning digital experiences. Let's collaborate!",
+    },
+  ],
+  bio: `I am a fourth-year BS/MS student in computer science at RIT. My academic foundation is reinforced by real-world experience from two six-month software engineering co-ops at Dassault Systèmes, where I honed my full stack development skills. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.`
+};
 
 export const Projects = [
   {
