@@ -75,7 +75,7 @@ export default function IntroSection({ onTabClick }: Props) {
               Resume <IoArrowDownSharp className="rotate-[-135deg]" />
             </a>
           </div>
-          <img className="w-[300px] mix-blend-luminosity" src="/bw-headshot-abstract.jpg" alt="An abstract portrait of Jacob Yoon. Shot by Sam Su." />
+          <img className="w-[300px] mix-blend-luminosity" src="/bw-headshot-abstract.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." />
         </div>
       </div>
       {/* <Star /> */}
