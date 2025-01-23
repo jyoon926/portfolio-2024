@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Intro } from '../utils/Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
+import Scene from './Scene';
 
 interface Props {
   onTabClick: (index: number) => void;
@@ -12,6 +13,7 @@ export default function IntroSection({ onTabClick }: Props) {
   const [showRightGradient, setShowRightGradient] = useState(false);
   const tabContainerRef = useRef<HTMLDivElement>(null);
 
+  // Tabs scroll gradient behavior
   useEffect(() => {
     const tabContainer = tabContainerRef.current;
 
@@ -41,10 +43,13 @@ export default function IntroSection({ onTabClick }: Props) {
 
   return (
     <div className="relative">
+      <div className="absolute inset-0 mix-blend-luminosity contrast-[0.9]">
+        <Scene />
+      </div>
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
-        <div className="w-full max-w-[800px] flex flex-col items-start justify-start overflow-hidden">
+        <div className="w-full flex flex-col items-start justify-start overflow-hidden">
           {/* Tabs */}
-          <div className="w-full relative pb-5">
+          <div className="w-full relative pb-5 z-[1]">
             {/* Gradients */}
             <div className={`gradient-left ${!showLeftGradient && 'opacity-0'}`}></div>
             <div className={`gradient-right ${!showRightGradient && 'opacity-0'}`}></div>
@@ -65,20 +70,19 @@ export default function IntroSection({ onTabClick }: Props) {
               ))}
             </div>
           </div>
-          <div className="leading-snug pb-10">{Intro.intros[currentTab].text}</div>
-          <p className="leading-snug pb-10">{Intro.bio}</p>
-          <div className="flex flex-row gap-5 pb-10">
+          <div className="max-w-[800px] leading-[1.15] pb-10 text-3xl sm:text-4xl z-[1]">{Intro.intros[currentTab].text}</div>
+          <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
+          <div className="flex flex-row gap-5 pb-10 z-[1]">
             <button className="button" onClick={() => onTabClick(1)}>
               View Projects <IoArrowDownSharp />
             </button>
-            <a className="button" href="/Jacob_Yoon_Resume.pdf" target="_blank">
+            <a className="button" href="/documents/Jacob_Yoon_Resume.pdf" target="_blank">
               Resume <IoArrowDownSharp className="rotate-[-135deg]" />
             </a>
           </div>
-          <img className="w-[300px] mix-blend-luminosity" src="/portraits/bw-headshot.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." />
+          <img className="w-[300px] mix-blend-luminosity z-[1]" src="/portraits/bw-headshot.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." />
         </div>
       </div>
-      {/* <Star /> */}
     </div >
   );
 }
