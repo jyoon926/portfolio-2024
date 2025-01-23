@@ -33,7 +33,7 @@ type ModelProps = {
 export default function Scene() {
   return (
     <Canvas shadows camera={{ position: [0, 0, 10], fov: 40 }} gl={{ antialias: true }}>
-      <spotLight position={[20, 10, 10]} angle={0.2} penumbra={1} intensity={1500} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} />
+      <spotLight position={[20, 10, 10]} angle={0.2} penumbra={1} intensity={1500} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
       <Environment resolution={1024} preset='studio' environmentIntensity={0.04} blur={0.4} />
       <Physics gravity={[12, 0, 0]}>
         <Pointer />

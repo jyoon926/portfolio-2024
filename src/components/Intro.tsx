@@ -11,6 +11,7 @@ export default function IntroSection({ onTabClick }: Props) {
   const [currentTab, setCurrentTab] = useState(0);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
   const [showRightGradient, setShowRightGradient] = useState(false);
+  const [isNonMobile, setIsNonMobile] = useState(false);
   const tabContainerRef = useRef<HTMLDivElement>(null);
 
   // Tabs scroll gradient behavior
@@ -37,15 +38,28 @@ export default function IntroSection({ onTabClick }: Props) {
     }
   }, []);
 
+  // Check for non-mobile devices
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)'); // Adjust the breakpoint as needed
+    const handleMediaChange = (e: MediaQueryListEvent) => setIsNonMobile(e.matches);
+
+    setIsNonMobile(mediaQuery.matches); // Set initial value
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+  }, []);
+
   const handleTabClick = (index: number) => {
     setCurrentTab(index);
   };
 
   return (
     <div className="relative">
-      <div className="absolute inset-0 mix-blend-luminosity contrast-[0.9]">
-        <Scene />
-      </div>
+      {isNonMobile && (
+        <div className="absolute inset-0 mix-blend-luminosity contrast-[0.9]">
+          <Scene />
+        </div>
+      )}
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
         <div className="w-full flex flex-col items-start justify-start overflow-hidden">
           {/* Tabs */}
