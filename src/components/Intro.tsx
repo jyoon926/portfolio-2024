@@ -10,7 +10,7 @@ interface Props {
 export default function IntroSection({ onTabClick }: Props) {
   const [currentTab, setCurrentTab] = useState(0);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
-  const [showRightGradient, setShowRightGradient] = useState(false);
+  const [showRightGradient, setShowRightGradient] = useState(true);
   const [isNonMobile, setIsNonMobile] = useState(false);
   const tabContainerRef = useRef<HTMLDivElement>(null);
 
@@ -56,7 +56,7 @@ export default function IntroSection({ onTabClick }: Props) {
   return (
     <div className="relative">
       {isNonMobile && (
-        <div className="absolute inset-0 mix-blend-luminosity contrast-[0.9]">
+        <div className="absolute inset-0 mix-blend-luminosity brightness-[0.9] contrast-[0.9]">
           <Scene />
         </div>
       )}
@@ -84,7 +84,7 @@ export default function IntroSection({ onTabClick }: Props) {
               ))}
             </div>
           </div>
-          <div className="max-w-[800px] leading-[1.15] pb-10 text-3xl sm:text-4xl z-[1]">{Intro.intros[currentTab].text}</div>
+          <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl sm:text-3xl z-[1]">{Intro.intros[currentTab].text}</div>
           <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
           <div className="flex flex-row gap-5 pb-10 z-[1]">
             <button className="button" onClick={() => onTabClick(1)}>
