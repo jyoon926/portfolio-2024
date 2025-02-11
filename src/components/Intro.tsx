@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Intro } from '../utils/Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
-import Scene from './Scene';
 
 interface Props {
   onTabClick: (index: number) => void;
@@ -11,7 +10,7 @@ export default function IntroSection({ onTabClick }: Props) {
   const [currentTab, setCurrentTab] = useState(0);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
   const [showRightGradient, setShowRightGradient] = useState(true);
-  const [isNonMobile, setIsNonMobile] = useState(false);
+  // const [isNonMobile, setIsNonMobile] = useState(false);
   const tabContainerRef = useRef<HTMLDivElement>(null);
 
   // Tabs scroll gradient behavior
@@ -39,15 +38,15 @@ export default function IntroSection({ onTabClick }: Props) {
   }, []);
 
   // Check for non-mobile devices
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)'); // Adjust the breakpoint as needed
-    const handleMediaChange = (e: MediaQueryListEvent) => setIsNonMobile(e.matches);
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia('(min-width: 768px)'); // Adjust the breakpoint as needed
+  //   const handleMediaChange = (e: MediaQueryListEvent) => setIsNonMobile(e.matches);
 
-    setIsNonMobile(mediaQuery.matches); // Set initial value
-    mediaQuery.addEventListener('change', handleMediaChange);
+  //   setIsNonMobile(mediaQuery.matches); // Set initial value
+  //   mediaQuery.addEventListener('change', handleMediaChange);
 
-    return () => mediaQuery.removeEventListener('change', handleMediaChange);
-  }, []);
+  //   return () => mediaQuery.removeEventListener('change', handleMediaChange);
+  // }, []);
 
   const handleTabClick = (index: number) => {
     setCurrentTab(index);
@@ -55,13 +54,13 @@ export default function IntroSection({ onTabClick }: Props) {
 
   return (
     <div className="relative">
-      {isNonMobile && (
+      {/* {isNonMobile && (
         <div className="absolute inset-0 mix-blend-luminosity brightness-[0.9] contrast-[0.9]">
           <Scene />
         </div>
-      )}
+      )} */}
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
-        <div className="w-full flex flex-col items-start justify-start overflow-hidden">
+        <div className="max-w-[800px] w-full flex flex-col items-start justify-start overflow-hidden">
           {/* Tabs */}
           <div className="w-full relative pb-5 z-[1]">
             {/* Gradients */}
@@ -84,7 +83,7 @@ export default function IntroSection({ onTabClick }: Props) {
               ))}
             </div>
           </div>
-          <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl sm:text-3xl z-[1]">{Intro.intros[currentTab].text}</div>
+          <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl md:text-3xl z-[1]">{Intro.intros[currentTab].text}</div>
           <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
           <div className="flex flex-row gap-5 pb-10 z-[1]">
             <button className="button" onClick={() => onTabClick(1)}>
