@@ -90,7 +90,7 @@ export default function SkillsSection() {
             >
               <p>{section.name}</p>
               <div className="flex flex-row gap-x-5 gap-y-2 flex-wrap">
-                {section.skills.map((skill, skillIndex) => (
+                {section.skills.map((skill) => (
                   <div
                     className="flex flex-row items-center justify-start gap-1.5 leading-none opacity-0"
                     key={skill.name}
