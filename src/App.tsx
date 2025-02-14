@@ -88,14 +88,15 @@ const getBlendedColors = (colorScheme: number): BlendedColors => {
   }
 };
 
-const Home = ({ sectionRefs, onTabClick }: {
+const Home = ({ sectionRefs, isLoaded, onTabClick }: {
   sectionRefs: React.MutableRefObject<(HTMLDivElement | null)[]>,
+  isLoaded: boolean,
   onTabClick: (index: number) => void
 }) => (
   <div>
     {Sections.map((section, index) => (
       <div key={index} ref={(el) => (sectionRefs.current[index] = el)}>
-        <section.component onTabClick={onTabClick} />
+        <section.component isLoaded={isLoaded} onTabClick={onTabClick} />
       </div>
     ))}
   </div>
@@ -105,6 +106,7 @@ function App() {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { colorScheme, handleThemeChange } = useColorScheme();
   const currentSection = useScrollTracking(sectionRefs);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleTabClick = useCallback((index: number) => {
     sectionRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
@@ -118,13 +120,17 @@ function App() {
     html.style.setProperty('--foreground', blendedColors.foreground);
   }, [colorScheme]);
 
+  const onLoaded = () => {
+    setIsLoaded(true);
+  }
+
   return (
     <div className="text-foreground">
       <ScrollToTop />
-      <Loader />
-      <Menu currentSection={currentSection} onTabClick={handleTabClick} />
+      <Loader onLoaded={onLoaded} />
+      <Menu isLoaded={isLoaded} currentSection={currentSection} onTabClick={handleTabClick} />
       <Routes>
-        <Route path="/" element={<Home sectionRefs={sectionRefs} onTabClick={handleTabClick} />} />
+        <Route path="/" element={<Home sectionRefs={sectionRefs} isLoaded={isLoaded} onTabClick={handleTabClick} />} />
         <Route path="/project/:projectUrl" element={<Project />} />
       </Routes>
       <ColorSlider colorScheme={colorScheme} onThemeChange={handleThemeChange} />

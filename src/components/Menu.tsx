@@ -1,17 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Sections } from '../utils/Data';
 
 interface Props {
+  isLoaded: boolean;
   currentSection: number;
   onTabClick: (index: number) => void;
 }
 
-export default function Menu({ currentSection, onTabClick }: Props) {
+export default function Menu({ isLoaded, currentSection, onTabClick }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const introRef = useRef<HTMLDivElement>(null);
 
   const handleTabClick = (index: number) => {
     onTabClick(index);
   };
+
+  // Fade-in animation when isLoaded becomes true
+  useEffect(() => {
+    if (isLoaded && introRef.current) {
+      const elements = introRef.current.children;
+      gsap.fromTo(
+        elements,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.8, stagger: 0.15, ease: 'power2.out' }
+      );
+    }
+  }, [isLoaded]);
 
   return (
     <>

@@ -1,52 +1,45 @@
 import { useState, useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 import { Intro } from '../utils/Data';
 import { IoArrowDownSharp } from 'react-icons/io5';
 
 interface Props {
+  isLoaded: boolean;
   onTabClick: (index: number) => void;
 }
 
-export default function IntroSection({ onTabClick }: Props) {
+export default function IntroSection({ isLoaded, onTabClick }: Props) {
   const [currentTab, setCurrentTab] = useState(0);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
   const [showRightGradient, setShowRightGradient] = useState(true);
-  // const [isNonMobile, setIsNonMobile] = useState(false);
   const tabContainerRef = useRef<HTMLDivElement>(null);
+  const introRef = useRef<HTMLDivElement>(null);
 
   // Tabs scroll gradient behavior
   useEffect(() => {
     const tabContainer = tabContainerRef.current;
-
     if (tabContainer) {
-      // Function to check and update gradient visibility
       const updateGradientVisibility = () => {
         setShowLeftGradient(tabContainer.scrollLeft > 2);
         setShowRightGradient(tabContainer.scrollLeft < tabContainer.scrollWidth - tabContainer.clientWidth - 2);
       };
-
-      // Initial check
       updateGradientVisibility();
-
-      // Event listener for scrolling
       tabContainer.addEventListener('scroll', updateGradientVisibility);
-
-      // Cleanup the event listener
-      return () => {
-        tabContainer.removeEventListener('scroll', updateGradientVisibility);
-      };
+      return () => tabContainer.removeEventListener('scroll', updateGradientVisibility);
     }
   }, []);
 
-  // Check for non-mobile devices
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia('(min-width: 768px)'); // Adjust the breakpoint as needed
-  //   const handleMediaChange = (e: MediaQueryListEvent) => setIsNonMobile(e.matches);
-
-  //   setIsNonMobile(mediaQuery.matches); // Set initial value
-  //   mediaQuery.addEventListener('change', handleMediaChange);
-
-  //   return () => mediaQuery.removeEventListener('change', handleMediaChange);
-  // }, []);
+  // Fade-in animation when isLoaded becomes true
+  useEffect(() => {
+    if (isLoaded && introRef.current) {
+      const elements = introRef.current.children;
+      gsap.fromTo(
+        elements,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.8, stagger: 0.15, ease: 'power2.out' }
+      );
+    }
+  }, [isLoaded]);
 
   const handleTabClick = (index: number) => {
     setCurrentTab(index);
@@ -54,16 +47,10 @@ export default function IntroSection({ onTabClick }: Props) {
 
   return (
     <div className="relative">
-      {/* {isNonMobile && (
-        <div className="absolute inset-0 mix-blend-luminosity brightness-[0.9] contrast-[0.9]">
-          <Scene />
-        </div>
-      )} */}
       <div className="min-h-screen w-full flex flex-col items-center p-5 pt-32 pb-24">
-        <div className="max-w-[800px] w-full flex flex-col items-start justify-start overflow-hidden">
+        <div ref={introRef} className="max-w-[800px] w-full flex flex-col items-start justify-start overflow-hidden">
           {/* Tabs */}
           <div className="w-full relative pb-5 z-[1]">
-            {/* Gradients */}
             <div className={`gradient-left ${!showLeftGradient && 'opacity-0'}`}></div>
             <div className={`gradient-right ${!showRightGradient && 'opacity-0'}`}></div>
             <div
@@ -83,6 +70,7 @@ export default function IntroSection({ onTabClick }: Props) {
               ))}
             </div>
           </div>
+
           <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl md:text-3xl z-[1]">{Intro.intros[currentTab].text}</div>
           <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
           <div className="flex flex-row gap-5 pb-10 z-[1]">
@@ -96,6 +84,6 @@ export default function IntroSection({ onTabClick }: Props) {
           <img className="w-[300px] mix-blend-luminosity z-[1]" src="/portraits/bw-headshot.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." />
         </div>
       </div>
-    </div >
+    </div>
   );
 }

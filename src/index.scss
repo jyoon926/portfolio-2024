@@ -47,15 +47,15 @@ body {
 
   .radius {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 100%;
     background: rgba(var(--foreground), 0.25);
-    animation: pulse 1.5s ease-out infinite;
+    animation: ping 1.5s ease-out infinite;
     transform-origin: center center;
   }
 
-  @keyframes pulse {
+  @keyframes ping {
     0% {
       transform: scale(0);
       opacity: 1;
@@ -124,19 +124,6 @@ body {
     .dot {
       opacity: 1;
     }
-  }
-}
-
-.loading-screen.loaded {
-  pointer-events: none;
-  animation: fade-out 1s forwards;
-}
-
-.loading-text {
-  animation: fade-in 1s forwards;
-
-  &.loaded {
-    animation: fade-out 1s forwards;
   }
 }
 
@@ -214,4 +201,43 @@ body {
 
 button:disabled {
   opacity: 0.25;
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-width: 2px;
+  border-top-color: rgb(var(--foreground));
+  border-radius: 100%;
+  animation: spin 1s linear infinite;
+
+  &.lg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
 }
