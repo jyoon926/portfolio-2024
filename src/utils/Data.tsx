@@ -89,7 +89,7 @@ export const Intro = {
       text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique, visually stunning digital experiences. Let's collaborate!",
     },
   ],
-  bio: `I am a fourth-year BS/MS student in computer science at RIT. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.`
+  bio: `I am a fifth-year BS/MS student in computer science at RIT. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.`
 };
 
 export const Projects = [
@@ -176,7 +176,7 @@ export const Experience = [
     role: 'Software Engineering Intern',
     date: 'May 2025 — August 2025',
     description:
-      'Upcoming role.',
+      'I am building a conversational provider search experience for public site chats in clinic and hospital websites. The assistant is powered by an agentic workflow that analyzes',
   },
   {
     company: 'Dassault Systèmes BIOVIA',

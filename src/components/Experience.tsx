@@ -21,6 +21,7 @@ export default function ExperienceSection() {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: headerRef.current,
+            start: 'top 85%',
             toggleActions: 'play none none none',
           },
         }
@@ -39,6 +40,7 @@ export default function ExperienceSection() {
             ease: 'power2.out',
             scrollTrigger: {
               trigger: el,
+              start: 'top 85%',
               toggleActions: 'play none none none',
             },
           }
