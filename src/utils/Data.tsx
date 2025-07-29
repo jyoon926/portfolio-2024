@@ -176,28 +176,28 @@ export const Experience = [
     role: 'Software Engineering Intern',
     date: 'May 2025 — August 2025',
     description:
-      'I am building a conversational provider search experience for public site chats in clinic and hospital websites. The assistant is powered by an agentic workflow that analyzes',
+      'I designed and implemented an intelligent LLM-powered conversational assistant that transforms how patients find healthcare providers on hospital websites. Using .NET frameworks and Azure infrastructure, I built a workflow capable of handling real-time queries and developed interactive React components for seamless user experiences. The project involved creating a comprehensive evaluation framework across 100+ conversation scenarios to drive improvements in agent design and prompting. Due to the success of this primary project, I was assigned an additional challenge to engineer an experiment pipeline to evaluate the effectiveness of assistant responses to patient questions when augmented with organization-specific knowledge base content. This will be used to help determine whether healthcare organizations should invest in building custom knowledge base infrastructure, or whether current large language models suffice for typical patient queries.',
   },
   {
     company: 'Dassault Systèmes BIOVIA',
     role: 'Software Engineer Intern',
     date: 'June 2024 — December 2024',
     description:
-      'I developed automation tools using Angular and Node.js to integrate Jira with internal issue tracking software, streamlining the project management process. Additionally, I implemented full-stack user stories and bug fixes with .NET C# and Angular, contributing to the development of the 3DEXPERIENCE platform.',
+      'During my second internship at Dassault Systèmes, I developed full-stack automation tools using Angular and Node.js to integrate Jira with internal issue tracking software, streamlining the project management process and eliminating 15+ hours of manual work weekly for project teams. Additionally, I implemented full-stack user stories and bug fixes with .NET C# and Angular, contributing to the development of the 3DEXPERIENCE platform for enterprise users.',
   },
   {
     company: 'Dassault Systèmes BIOVIA',
     role: 'Software Engineer Intern',
     date: 'May 2023 — December 2023',
     description:
-      'I overhauled the search functionality in a legacy application using Angular and .NET, resulting in a 90% improvement in search performance. Additionally, I developed .NET endpoints to optimize interactions with Oracle, significantly reducing data retrieval times. I also built internal tools using Angular, Node.js, and Express to automate the creation of demo data in application environments.',
+      'In my first internship at Dassault Systèmes, I overhauled the search functionality in a legacy application using Angular and .NET, resulting in a 90% improvement in search performance. Additionally, I developed .NET endpoints to optimize interactions with Oracle, significantly reducing data retrieval times. I also built internal tools using Angular, Node.js, and Express to automate the creation of demo data in application environments.',
   },
   {
     company: 'RIT Department of Computer Science',
     role: 'Student Lab Instructor',
     date: 'August 2022 — December 2022',
     description:
-      'I assisted 24 students taking CSCI-140 (CS for AP Students) with lab assignments and problem-solving sessions, providing support in Python and Java to teach key computer science concepts. Additionally, I tutored over 100 intro-level CS students at the GCCIS Tutoring Center.',
+      'I guided 24 students through hands-on programming assignments in Python and Java, covering core concepts like object-oriented programming, algorithms, and data structures. I provided detailed feedback on projects and assignments while also tutoring over 100 students at the GCCIS Tutoring Center, helping strengthen foundational CS skills.',
   },
 ];
 
