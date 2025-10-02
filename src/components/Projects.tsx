@@ -69,7 +69,7 @@ export default function ProjectsSection() {
             </div>
             <div className="grow flex flex-col leading-snug text-nowrap">
               <p>{project.title}</p>
-              <p className="opacity-50">{project.caption}</p>
+              <p className="opacity-60">{project.caption}</p>
             </div>
           </Link>
         ))}

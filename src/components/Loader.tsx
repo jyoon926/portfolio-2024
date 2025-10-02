@@ -54,7 +54,7 @@ export default function Loader({ onLoaded }: Props) {
     <div ref={loaderRef} className="fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50">
       <div ref={textRef} className="flex flex-col items-center gap-6">
         <div className="text-xl md:text-3xl">
-          Jacob Yoon<span className="opacity-50"> — Software Engineer</span>
+          Jacob Yoon<span className="opacity-60"> — Software Engineer</span>
         </div>
         <LoadingDots />
       </div>

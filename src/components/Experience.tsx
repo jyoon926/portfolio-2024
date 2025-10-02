@@ -61,11 +61,11 @@ export default function ExperienceSection() {
           >
             <div className="flex flex-col w-full gap-1 md:w-1/3">
               <p className="font-bold">{job.company}</p>
-              <p className="opacity-50">{job.date}</p>
+              <p className="opacity-60">{job.date}</p>
             </div>
             <div className="flex flex-col w-full gap-1 md:w-2/3 max-w-[600px]">
               <p className="font-bold">{job.role}</p>
-              <p className="opacity-50">{job.description}</p>
+              <p className="opacity-60">{job.description}</p>
             </div>
           </div>
         ))}

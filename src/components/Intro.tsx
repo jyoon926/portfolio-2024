@@ -60,12 +60,12 @@ export default function IntroSection({ isLoaded, onTabClick }: Props) {
               {Intro.intros.map((intro, index) => (
                 <div key={index}>
                   <button
-                    className={`pr-1 whitespace-nowrap transition-opacity hover:opacity-100 ${currentTab !== index && 'opacity-50'}`}
+                    className={`pr-1 whitespace-nowrap transition-opacity hover:opacity-100 ${currentTab !== index && 'opacity-60'}`}
                     onClick={() => handleTabClick(index)}
                   >
                     {intro.label}
                   </button>
-                  {index < Intro.intros.length - 1 && <span className="opacity-50">/</span>}
+                  {index < Intro.intros.length - 1 && <span className="opacity-60">/</span>}
                 </div>
               ))}
             </div>

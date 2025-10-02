@@ -41,7 +41,7 @@ export default function ContactSection() {
             </div>
             <p ref={(el) => fadeInRefs.current.push(el)}>Available for work</p>
           </div>
-          <p className="opacity-50" ref={(el) => fadeInRefs.current.push(el)}>
+          <p className="opacity-60" ref={(el) => fadeInRefs.current.push(el)}>
             I am currently looking for full time software engineering roles starting in 2026. I hope to hear from
             you!
           </p>
