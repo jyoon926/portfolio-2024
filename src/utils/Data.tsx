@@ -207,9 +207,9 @@ export const Education = {
   location: 'Rochester, NY',
   date: 'August 2021 — May 2026',
   bullets: [
-    'Cumulative GPA: 3.88/4.0',
+    'Cumulative GPA: 3.89/4.0',
     'Master’s Thesis: LLM and embedding-based approaches for mathematical information retrieval and question answering',
-    'Relevant coursework: Machine Learning, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
+    'Relevant coursework: Information Retrieval, Computer Vision, Graph Databases, Machine Learning, Computational Geometry, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
     'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)'
   ]
 };
