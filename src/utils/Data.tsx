@@ -94,6 +94,25 @@ export const Intro = {
 
 export const Projects = [
   {
+    projectUrl: 'motion-planning-visualizer',
+    title: 'Motion Planning Visualizer',
+    caption: 'React, Zustand, Tailwind CSS',
+    date: 'October 2025 - December 2025',
+    description: `The Motion Planning Visualizer is a web application created for the course Computational Geometry (CSCI 716). This visualizer demonstrates two conceptually different approaches to solving the motion planning problem—finding a path for an agent from a start point to a goal point while avoiding obstacles. The application allows users to draw obstacles and see the path-finding algorithms computed step-by-step. A "Compare" mode is included to showcase the trade-off between the visibility graph (shortest path) and voronoi graph (maximum clearance) approaches.`,
+    technologies: ['React', 'Zustand', 'Tailwind CSS', 'Firebase'],
+    images: [
+      '/projects/motion-planning-visualizer.png',
+      '/projects/motion-planning-visualizer-2.png',
+      '/projects/motion-planning-visualizer-5.png',
+      '/projects/motion-planning-visualizer-1.png',
+      '/projects/motion-planning-visualizer-4.png',
+      '/projects/motion-planning-visualizer-3.png',
+      '/projects/motion-planning-visualizer-6.png',
+    ],
+    link: 'https://motion-planning-visualizer.web.app/',
+    github: 'https://github.com/jyoon926/motion-planning-visualizer',
+  },
+  {
     projectUrl: 'audio-spheres',
     title: 'Audio Spheres',
     caption: 'React, Tailwind CSS, Spotify Web API, OpenAI API',
@@ -208,7 +227,7 @@ export const Education = {
   date: 'August 2021 — May 2026',
   bullets: [
     'Cumulative GPA: 3.89/4.0',
-    'Master’s Thesis: LLM and embedding-based approaches for mathematical information retrieval and question answering',
+    'Master’s Thesis: Unified Graph Representations for Multimodal Mathematical Information Retrieval',
     'Relevant coursework: Information Retrieval, Computer Vision, Graph Databases, Machine Learning, Computational Geometry, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
     'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)'
   ]
