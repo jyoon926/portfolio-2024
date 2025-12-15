@@ -12,7 +12,7 @@ export default function ColorSlider({ colorScheme, onThemeChange }: Props) {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 color-slider w-9 h-96 flex flex-col justify-start items-center rounded-full bg-background/70 border overflow-hidden backdrop-blur z-40">
+    <div className="fixed bottom-5 right-5 color-slider w-9 h-96 flex flex-col justify-start items-center rounded-full bg-foreground/15 border overflow-hidden backdrop-blur z-40">
       <div className="notches grow flex flex-col justify-between items-center p-2 gap-1 pointer-events-none">
         <div className="w-5 h-5 flex justify-center items-center">
           <IoMdSunny className="text-lg opacity-80" />
