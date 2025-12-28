@@ -125,7 +125,7 @@ export const Intro = {
       text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique digital experiences. Let's collaborate!",
     },
   ],
-  bio: `I’m a BS/MS computer science student at RIT focused on software engineering and machine learning research. My work lives at the intersection of systems, intelligence, and design. I enjoy building robust, scalable software while approaching problems with an artist’s sensitivity to form, interaction, and experience. I’m particularly drawn to ML-driven systems, interactive visual tools, and products that balance technical rigor with creative intention, treating software not just as infrastructure, but as a medium for expression.`,
+  bio: `I’m a BS/MS computer science student at RIT focused on software engineering and machine learning research. I enjoy building robust, scalable software while approaching problems with an artist’s sensitivity to form, interaction, and experience. I’m particularly drawn to ML-driven systems, interactive visual tools, and products that balance technical capability with creative intention, treating software not just as infrastructure, but as a medium for expression.`,
 };
 
 export const Projects = [
