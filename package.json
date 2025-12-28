@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint-fix": "eslint . --fix",
+    "preview": "vite preview",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@react-three/drei": "^9.121.3",

@@ -51,7 +51,9 @@ export default function ExperienceSection() {
 
   return (
     <div className="flex flex-col items-start justify-start mx-5 border-t py-24">
-      <p className="text-4xl text-center mb-12" ref={headerRef}>Experience</p>
+      <p className="text-4xl text-center mb-12" ref={headerRef}>
+        Experience
+      </p>
       <div className="w-full flex flex-col gap-12">
         {Experience.map((job, index) => (
           <div

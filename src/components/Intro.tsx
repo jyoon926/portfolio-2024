@@ -71,7 +71,9 @@ export default function IntroSection({ isLoaded, onTabClick }: Props) {
             </div>
           </div>
 
-          <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl md:text-3xl z-[1]">{Intro.intros[currentTab].text}</div>
+          <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl md:text-3xl z-[1]">
+            {Intro.intros[currentTab].text}
+          </div>
           <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
           <div className="flex flex-row gap-5 pb-10 z-[1]">
             <button className="button" onClick={() => onTabClick(1)}>
@@ -81,7 +83,11 @@ export default function IntroSection({ isLoaded, onTabClick }: Props) {
               Resume <IoArrowDownSharp className="rotate-[-135deg]" />
             </a>
           </div>
-          <img className="w-[300px] mix-blend-luminosity z-[1]" src="/portraits/bw-headshot.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." />
+          <img
+            className="w-[300px] mix-blend-luminosity z-[1]"
+            src="/portraits/bw-headshot.jpg"
+            alt="A portrait of Jacob Yoon. Shot by Sam Su."
+          />
         </div>
       </div>
     </div>

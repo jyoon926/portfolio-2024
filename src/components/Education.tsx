@@ -70,7 +70,9 @@ export default function EducationSection() {
             <p className="font-bold">{Education.degree}</p>
             <p className="opacity-60">{Education.date}</p>
             {Education.bullets.map((bullet) => (
-              <p className="opacity-60 mt-3" key={bullet}>{bullet}</p>
+              <p className="opacity-60 mt-3" key={bullet}>
+                {bullet}
+              </p>
             ))}
           </div>
         </div>

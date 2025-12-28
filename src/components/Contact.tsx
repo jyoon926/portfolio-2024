@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { Contact } from "../utils/Data";
+import { useEffect, useRef } from 'react';
+import { Contact } from '../utils/Data';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -42,19 +42,29 @@ export default function ContactSection() {
             <p ref={(el) => fadeInRefs.current.push(el)}>Available for work</p>
           </div>
           <p className="opacity-60" ref={(el) => fadeInRefs.current.push(el)}>
-            I am currently looking for full time software engineering roles starting in 2026. I hope to hear from
-            you!
+            I am currently looking for full time software engineering roles starting in 2026. I hope to hear from you!
           </p>
         </div>
         <div className="flex flex-row gap-8">
           {Contact.links.map((link) => (
-            <a className="border-b pb-0.5" href={link.url} target="_blank" key={link.url} ref={(el) => fadeInRefs.current.push(el)}>
+            <a
+              className="border-b pb-0.5"
+              href={link.url}
+              target="_blank"
+              key={link.url}
+              ref={(el) => fadeInRefs.current.push(el)}
+            >
               {link.text}
             </a>
           ))}
         </div>
       </div>
-      <img className="w-80 mix-blend-luminosity" src="/portraits/bw-headshot-2.jpg" alt="A portrait of Jacob Yoon. Shot by Sam Su." ref={(el) => fadeInRefs.current.push(el)} />
+      <img
+        className="w-80 mix-blend-luminosity"
+        src="/portraits/bw-headshot-2.jpg"
+        alt="A portrait of Jacob Yoon. Shot by Sam Su."
+        ref={(el) => fadeInRefs.current.push(el)}
+      />
     </div>
   );
 }

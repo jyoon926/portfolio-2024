@@ -1,11 +1,47 @@
-import { BiLogoAngular, BiLogoAws, BiLogoDocker, BiLogoHtml5, BiLogoJava, BiLogoJavascript, BiLogoNodejs, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoSpringBoot, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi';
+import {
+  BiLogoAngular,
+  BiLogoAws,
+  BiLogoDocker,
+  BiLogoHtml5,
+  BiLogoJava,
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoPython,
+  BiLogoReact,
+  BiLogoSpringBoot,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+} from 'react-icons/bi';
 import ContactSection from '../components/Contact';
 import EducationSection from '../components/Education';
 import ExperienceSection from '../components/Experience';
 import IntroSection from '../components/Intro';
 import ProjectsSection from '../components/Projects';
 import SkillsSection from '../components/Skills';
-import { SiC, SiCplusplus, SiCsharp, SiDotnet, SiExpress, SiFigma, SiFirebase, SiHuggingface, SiJenkins, SiMariadb, SiMongodb, SiMysql, SiNumpy, SiOracle, SiPandas, SiPostman, SiPytorch, SiSupabase, SiTensorflow } from 'react-icons/si';
+import {
+  SiC,
+  SiCplusplus,
+  SiCsharp,
+  SiDotnet,
+  SiExpress,
+  SiFigma,
+  SiFirebase,
+  SiHuggingface,
+  SiJenkins,
+  SiJupyter,
+  SiMariadb,
+  SiMongodb,
+  SiMysql,
+  SiNumpy,
+  SiOpencv,
+  SiOracle,
+  SiPandas,
+  SiPostman,
+  SiPytorch,
+  SiSupabase,
+  SiTensorflow,
+} from 'react-icons/si';
 import { RiNextjsFill, RiPenNibFill } from 'react-icons/ri';
 import { MdComputer } from 'react-icons/md';
 import { PiCubeTransparent } from 'react-icons/pi';
@@ -70,26 +106,26 @@ export const Intro = {
   intros: [
     {
       label: 'For Anyone',
-      text: "Hi! I am a software engineer who cares about making beautiful and impactful digital products.",
+      text: 'Hi! I’m a software engineer and machine learning researcher who designs thoughtful, beautiful, and intelligent digital experiences.',
     },
     {
       label: 'Recruiters',
-      text: "I'm a passionate software engineer who thrives on continuous learning and excels at combining technical expertise and creativity to build beautiful and impactful digital products.",
+      text: 'I’m a software engineer and ML researcher who combines strong systems thinking with product intuition and design sensibility to build impactful, human-centered software.',
     },
     {
       label: 'Engineers',
-      text: "I'm a full-stack engineer with a passion for elegant solutions, beautiful systems, clean code, and innovative tech. Let's collaborate on pushing the boundaries of what's possible with code.",
+      text: 'I’m a full-stack engineer with a research mindset. I care deeply about system design, clean abstractions, and using ML thoughtfully while never losing sight of usability.',
     },
     {
       label: 'Product Managers',
-      text: "I'm a developer who understands both sides of the coin—tech and user experience. I love working on cross-functional teams to design and build products that align with vision and functionality.",
+      text: 'I bridge engineering, research, and design. I enjoy translating ambiguous product ideas into scalable systems and intuitive experiences, working across disciplines.',
     },
     {
       label: 'Creatives',
-      text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique, visually stunning digital experiences. Let's collaborate!",
+      text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique digital experiences. Let's collaborate!",
     },
   ],
-  bio: `I am a fifth-year BS/MS student in computer science at RIT. Drawing from my passion for art and design, I craft digital experiences by blending technical expertise with creative vision. I thrive on technical challenges and approach software development as a continuous journey of innovation, always pushing the boundaries of what's possible through code.`
+  bio: `I’m a BS/MS computer science student at RIT focused on software engineering and machine learning research. My work lives at the intersection of systems, intelligence, and design. I enjoy building robust, scalable software while approaching problems with an artist’s sensitivity to form, interaction, and experience. I’m particularly drawn to ML-driven systems, interactive visual tools, and products that balance technical rigor with creative intention, treating software not just as infrastructure, but as a medium for expression.`,
 };
 
 export const Projects = [
@@ -98,15 +134,15 @@ export const Projects = [
     title: 'Motion Planning Visualizer',
     caption: 'React, Zustand, Tailwind CSS',
     date: 'October 2025 - December 2025',
-    description: `The Motion Planning Visualizer is a web application created for the course Computational Geometry (CSCI 716). This visualizer demonstrates two conceptually different approaches to solving the motion planning problem—finding a path for an agent from a start point to a goal point while avoiding obstacles. The application allows users to draw obstacles and see the path-finding algorithms computed step-by-step. A "Compare" mode is included to showcase the trade-off between the visibility graph (shortest path) and voronoi graph (maximum clearance) approaches.`,
+    description: `The Motion Planning Visualizer is an interactive web application built for Computational Geometry (CSCI 716) that explores algorithmic approaches to 2D motion planning. The tool demonstrates two fundamentally different strategies—visibility graphs, which prioritize shortest paths, and Voronoi graphs, which maximize clearance from obstacles—allowing users to directly compare their trade-offs. Users can draw custom obstacle configurations and watch paths emerge step-by-step, turning abstract geometric/computational concepts into tangible, intuitive experiences. The project emphasizes clarity, interactivity, and algorithmic insight through visualization.`,
     technologies: ['React', 'Zustand', 'Tailwind CSS', 'Firebase'],
     images: [
+      '/projects/motion-planning-visualizer.png',
       '/projects/motion-planning-visualizer-1.png',
       '/projects/motion-planning-visualizer-2.png',
-      '/projects/motion-planning-visualizer-5.png',
-      '/projects/motion-planning-visualizer-4.png',
       '/projects/motion-planning-visualizer-3.png',
-      '/projects/motion-planning-visualizer.png',
+      '/projects/motion-planning-visualizer-4.png',
+      '/projects/motion-planning-visualizer-5.png',
       '/projects/motion-planning-visualizer-6.png',
     ],
     link: 'https://motion-planning-visualizer.web.app/',
@@ -117,7 +153,9 @@ export const Projects = [
     title: 'Audio Spheres',
     caption: 'React, Tailwind CSS, Spotify Web API, OpenAI API',
     date: 'November 2024 - Present',
-    description: `After experimenting with the Spotify Web API last year, I set out to create a more innovative and immersive way to explore music. This led to Audio Spheres, an app that allows users to discover songs through an interactive, tree-like interface. Each 'sphere' begins with a seed track and branches out into hyper-specific representations of the user's music tastes. I've developed a proof of concept where users can intuitively navigate the tree by panning and zooming, adding new nodes that represent tracks inspired by the ancestry of their branch. Recently, I connected the app to a Firestore database, enabling users to create and manage their spheres seamlessly. This improvement allows users to save their progress and return to their personalized music exploration anytime. Looking ahead, I plan to incorporate OpenAI's API to generate creative elements like titles, labels, descriptions, and playlist covers, further enhancing the personalization and creativity of the experience.`,
+    description: `Audio Spheres is an experimental music discovery platform that reimagines how users explore and organize music. Instead of relying on linear playlists or opaque recommendation feeds, the app presents music as an interactive, branching structure where each “sphere” represents a track and its musical lineage. Starting from a seed song, users expand outward into increasingly specific interpretations of their taste by navigating, panning, and growing the tree organically.
+    
+    The system is backed by persistent storage via Firestore, allowing users to save and revisit their evolving musical landscapes. Ongoing work explores integrating LLMs to generate expressive titles, descriptions, and visual identity for each sphere, treating machine learning not just as a recommender, but as a creative collaborator in shaping musical exploration.`,
     technologies: ['React', 'Tailwind CSS', 'Spotify Web API', 'Firebase', 'OpenAI API'],
     images: [
       '/projects/audio-spheres.png',
@@ -176,7 +214,7 @@ export const Projects = [
     caption: 'Angular, Spotify Web API, Cohere API',
     date: 'January 2024',
     description:
-      "Inspired Playlists was a personal project designed to explore the potential of the Spotify Web API and the Cohere API (LLM). I was intrigued by how Spotify's recommendation algorithms, like those behind 'Discover Weekly,' 'Daylist,' and features like DJ and suggested songs, often felt like an echo chamber—reinforcing familiar tastes and making it harder to discover fresh music. I built this website to break that pattern, offering a more intentional and liberating way to discover new artists and songs.",
+      "Inspired Playlists was a personal project designed to explore the potential of the Spotify Web API and the Cohere LLM API. I was intrigued by how Spotify's recommendation algorithms, like those behind 'Discover Weekly,' 'Daylist,' and features like DJ and suggested songs, often felt like an echo chamber—reinforcing familiar tastes and making it harder to discover fresh music. I built this website to break that pattern, offering a more intentional and liberating way to discover new artists and songs.",
     technologies: ['Angular', 'Firebase', 'Cohere API'],
     images: [
       '/projects/inspired-playlists.png',
@@ -195,28 +233,28 @@ export const Experience = [
     role: 'Software Engineering Intern',
     date: 'May 2025 — August 2025',
     description:
-      'I designed and implemented an intelligent LLM-powered conversational assistant that transforms how patients find healthcare providers on hospital websites. Using .NET frameworks and Azure infrastructure, I built a workflow capable of handling real-time queries and developed interactive React components for seamless user experiences. The project involved creating a comprehensive evaluation framework across 100+ conversation scenarios to drive improvements in agent design and prompting. Due to the success of this primary project, I was assigned an additional challenge to engineer an experiment pipeline to evaluate the effectiveness of assistant responses to patient questions when augmented with organization-specific knowledge base content. This will be used to help determine whether healthcare organizations should invest in building custom knowledge base infrastructure, or whether current large language models suffice for typical patient queries.',
+      'I designed and built an LLM-powered conversational assistant that reimagines how patients discover healthcare providers on hospital websites. Working across .NET and Azure infrastructure, I implemented a real-time query workflow and paired it with interactive React components to create a seamless, patient-facing experience. To evaluate and improve agent behavior, I developed a structured assessment framework spanning 100+ representative conversation scenarios, enabling systematic iteration on prompting and agent design. Following the success of this work, I was tasked with engineering an experimental pipeline to measure how response quality changes when the assistant is augmented with organization-specific knowledge bases, helping inform whether healthcare systems should invest in custom retrieval infrastructure or rely on general-purpose language models.',
   },
   {
     company: 'Dassault Systèmes BIOVIA',
     role: 'Software Engineer Intern',
     date: 'June 2024 — December 2024',
     description:
-      'During my second internship at Dassault Systèmes, I developed full-stack automation tools using Angular and Node.js to integrate Jira with internal issue tracking software, streamlining the project management process and eliminating 15+ hours of manual work weekly for project teams. Additionally, I implemented full-stack user stories and bug fixes with .NET C# and Angular, contributing to the development of the 3DEXPERIENCE platform for enterprise users.',
+      'During my second internship at Dassault Systèmes, I focused on building full-stack automation tools that reduced friction in large-scale project workflows. Using Angular and Node.js, I designed integrations between Jira and internal issue-tracking systems, eliminating 15+ hours of manual work per week for project teams. Alongside this systems work, I implemented user stories and resolved production bugs across a .NET C# and Angular stack, contributing directly to the 3DEXPERIENCE platform used by enterprise customers. The role emphasized reliability, maintainability, and thoughtful abstraction in a complex, long-lived codebase.',
   },
   {
     company: 'Dassault Systèmes BIOVIA',
     role: 'Software Engineer Intern',
     date: 'May 2023 — December 2023',
     description:
-      'In my first internship at Dassault Systèmes, I overhauled the search functionality in a legacy application using Angular and .NET, resulting in a 90% improvement in search performance. Additionally, I developed .NET endpoints to optimize interactions with Oracle, significantly reducing data retrieval times. I also built internal tools using Angular, Node.js, and Express to automate the creation of demo data in application environments.',
+      'In my first internship at Dassault Systèmes, I worked on modernizing and optimizing legacy systems. I redesigned a core search feature using Angular and .NET, achieving a 90% improvement in search performance and responsiveness. I also developed backend endpoints to streamline interactions with Oracle databases, significantly reducing data retrieval times. In parallel, I built internal tooling with Angular, Node.js, and Express to automate the generation of demo data, improving developer productivity and environment consistency across teams.',
   },
   {
     company: 'RIT Department of Computer Science',
     role: 'Student Lab Instructor',
     date: 'August 2022 — December 2022',
     description:
-      'I guided 24 students through hands-on programming assignments in Python and Java, covering core concepts like object-oriented programming, algorithms, and data structures. I provided detailed feedback on projects and assignments while also tutoring over 100 students at the GCCIS Tutoring Center, helping strengthen foundational CS skills.',
+      'I supported undergraduate computer science students through hands-on lab instruction in Python and Java, covering foundational topics including object-oriented programming, algorithms, and data structures. I provided detailed feedback on assignments and projects while also tutoring over 100 students at the GCCIS Tutoring Center, helping students strengthen both conceptual understanding and practical problem-solving skills.',
   },
 ];
 
@@ -229,8 +267,8 @@ export const Education = {
     'Cumulative GPA: 3.89/4.0',
     'Master’s Thesis: Unified Graph Representations for Multimodal Mathematical Information Retrieval',
     'Relevant coursework: Information Retrieval, Computer Vision, Graph Databases, Machine Learning, Computational Geometry, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
-    'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)'
-  ]
+    'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)',
+  ],
 };
 
 export const Skills = {
@@ -247,7 +285,7 @@ export const Skills = {
         { name: 'C++', icon: <SiCplusplus /> },
         { name: 'HTML/CSS', icon: <BiLogoHtml5 /> },
         { name: 'SQL', icon: <HiDatabase /> },
-      ]
+      ],
     },
     {
       name: 'Web Development',
@@ -260,17 +298,19 @@ export const Skills = {
         { name: 'Express', icon: <SiExpress /> },
         { name: 'Tailwind CSS', icon: <BiLogoTailwindCss /> },
         { name: 'Spring', icon: <BiLogoSpringBoot /> },
-      ]
+      ],
     },
     {
       name: 'AI/ML',
       skills: [
-        { name: 'TensorFlow', icon: <SiTensorflow /> },
         { name: 'PyTorch', icon: <SiPytorch /> },
         { name: 'Hugging Face', icon: <SiHuggingface /> },
+        { name: 'OpenCV', icon: <SiOpencv /> },
+        { name: 'TensorFlow', icon: <SiTensorflow /> },
         { name: 'NumPy', icon: <SiNumpy /> },
+        { name: 'Jupyter Notebook', icon: <SiJupyter /> },
         { name: 'Pandas', icon: <SiPandas /> },
-      ]
+      ],
     },
     {
       name: 'Tools',
@@ -287,7 +327,7 @@ export const Skills = {
         { name: 'MongoDB', icon: <SiMongodb /> },
         { name: 'MySQL', icon: <SiMysql /> },
         { name: 'Figma', icon: <SiFigma /> },
-      ]
+      ],
     },
     {
       name: 'Interests/Hobbies',
@@ -302,59 +342,28 @@ export const Skills = {
         { name: 'Oboe', icon: <GiClarinet /> },
         { name: 'Guitar', icon: <GiGuitar /> },
         { name: 'Photography', icon: <IoCameraSharp /> },
-      ]
-    }
-  ]
-}
-
-export const CreativeWorks = [
-  {
-    caption: 'Beyond Fashion 2024',
-    image: '/creative-works/beyond-fashion-2024-1.jpg',
-  },
-  {
-    caption: 'Beyond Fashion 2024',
-    image: '/creative-works/beyond-fashion-2024-2.jpeg',
-  },
-  {
-    caption: 'Beyond Fashion 2024',
-    image: '/creative-works/beyond-fashion-2024-3.jpg',
-  },
-  {
-    caption: 'Beyond Fashion 2023',
-    image: '/creative-works/beyond-fashion-2023-1.jpeg',
-  },
-  {
-    caption: 'Beyond Fashion 2024',
-    image: '/creative-works/beyond-fashion-2023-2.jpeg',
-  },
-  {
-    caption: 'Line Woman',
-    image: '/creative-works/line-woman.jpg',
-  },
-  {
-    caption: 'Disassociation',
-    image: '/creative-works/disassociation.jpg',
-  },
-]
+      ],
+    },
+  ],
+};
 
 export const Contact = {
   links: [
     {
       url: 'mailto:jy9726@rit.edu',
-      text: 'jy9726@rit.edu'
+      text: 'jy9726@rit.edu',
     },
     {
       url: 'https://www.linkedin.com/in/jaacobyoon/',
-      text: 'LinkedIn'
+      text: 'LinkedIn',
     },
     {
       url: 'https://github.com/jyoon926/',
-      text: 'GitHub'
+      text: 'GitHub',
     },
     {
       url: 'https://www.instagram.com/jaacobyoon/',
-      text: 'Instagram'
-    }
-  ]
-}
+      text: 'Instagram',
+    },
+  ],
+};

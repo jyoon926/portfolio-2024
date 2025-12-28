@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Skills } from "../utils/Data";
+import { Skills } from '../utils/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,7 @@ export default function SkillsSection() {
                   <div
                     className="flex flex-row items-center justify-start gap-1.5 leading-none opacity-0"
                     key={skill.name}
-                    ref={(el) => (skillRefs.current.push(el))} // Reference each individual skill item
+                    ref={(el) => skillRefs.current.push(el)} // Reference each individual skill item
                   >
                     <span className="text-xl">{skill.icon}</span>
                     <span className="pt-0.5">{skill.name}</span>

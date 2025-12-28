@@ -40,8 +40,11 @@ export default function Project() {
 
   return (
     <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-24 flex flex-col justify-start items-start gap-10">
-      <Link className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70" to="/">
-        <MdArrowBackIos className='text-sm' /> Home
+      <Link
+        className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70"
+        to="/"
+      >
+        <MdArrowBackIos className="text-sm" /> Home
       </Link>
       {project ? (
         <>
@@ -49,12 +52,15 @@ export default function Project() {
             <p className="opacity-60 text-center">Project Overview</p>
             <p className="text-4xl text-center">{project.title}</p>
             <p className="text-center">{project.date}</p>
-            <button className="my-10 lg:w-3/4 border bg-foreground/15 p-5 lg:p-10 duration-300 hover:bg-foreground/25" onClick={() => handlePhotoClick(0)}>
+            <button
+              className="my-10 lg:w-3/4 border bg-foreground/15 p-5 lg:p-10 duration-300 hover:bg-foreground/25"
+              onClick={() => handlePhotoClick(0)}
+            >
               <img className="w-full" src={project.images[0]} alt={`Main project image for '${project.title}'.`} />
             </button>
             <div className="w-full mb-8 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-60">About</p>
-              <p className="md:w-3/4 max-w-[600px] leading-normal">{project.description}</p>
+              <p className="md:w-3/4 max-w-[600px] leading-normal whitespace-pre-line">{project.description}</p>
             </div>
             <div className="w-full mb-10 flex flex-col md:flex-row justify-center gap-3">
               <p className="md:w-1/4 max-w-[200px] opacity-60">Technologies</p>
@@ -83,7 +89,11 @@ export default function Project() {
               style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}
             >
               {project.images.slice(1).map((image, index) => (
-                <button className="border bg-foreground/15 p-5 md:p-8 duration-300 hover:bg-foreground/25" key={index} onClick={() => handlePhotoClick(index + 1)}>
+                <button
+                  className="border bg-foreground/15 p-5 md:p-8 duration-300 hover:bg-foreground/25"
+                  key={index}
+                  onClick={() => handlePhotoClick(index + 1)}
+                >
                   <img className="w-full" src={image} alt={`Project image for '${project.title}'.`} />
                 </button>
               ))}

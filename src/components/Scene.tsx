@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import { Environment, useGLTF } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { BallCollider, CuboidCollider, Physics, RigidBody } from "@react-three/rapier";
+import { Environment, useGLTF } from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { BallCollider, CuboidCollider, Physics, RigidBody } from '@react-three/rapier';
 import { useMemo, useRef } from 'react';
 
 const connectors = [
@@ -33,18 +33,24 @@ type ModelProps = {
 export default function Scene() {
   return (
     <Canvas shadows camera={{ position: [0, 0, 10], fov: 40 }} gl={{ antialias: true }}>
-      <spotLight position={[18, 10, 10]} angle={0.2} penumbra={1} intensity={1500} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
-      <Environment resolution={1024} preset='studio' environmentIntensity={0.04} blur={0.4} />
+      <spotLight
+        position={[18, 10, 10]}
+        angle={0.2}
+        penumbra={1}
+        intensity={1500}
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+      />
+      <Environment resolution={1024} preset="studio" environmentIntensity={0.04} blur={0.4} />
       <Physics gravity={[8, 0, 0]}>
         <Pointer />
         {connectors.map((props, i) =>
-          Array.from({ length: props.count }, (_, j) => (
-            <Connector key={`${i}, ${j}`} {...props} />
-          ))
+          Array.from({ length: props.count }, (_, j) => <Connector key={`${i}, ${j}`} {...props} />)
         )}
       </Physics>
-    </Canvas >
-  )
+    </Canvas>
+  );
 }
 
 function Pointer({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
@@ -52,7 +58,9 @@ function Pointer({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
 
   useFrame(({ mouse, viewport }) => {
     if (ref.current) {
-      ref.current.setNextKinematicTranslation(vec.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 0));
+      ref.current.setNextKinematicTranslation(
+        vec.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 0)
+      );
     }
   });
 
@@ -63,7 +71,13 @@ function Pointer({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
   );
 }
 
-function Connector({ position, children, vec = new THREE.Vector3(), r = THREE.MathUtils.randFloatSpread, ...props }: ConnectorProps) {
+function Connector({
+  position,
+  children,
+  vec = new THREE.Vector3(),
+  r = THREE.MathUtils.randFloatSpread,
+  ...props
+}: ConnectorProps) {
   const api = useRef<any>(null);
   const pos = useMemo(() => position || new THREE.Vector3(r(10), r(10), r(10)), [position, r]);
 
@@ -84,7 +98,7 @@ function Connector({ position, children, vec = new THREE.Vector3(), r = THREE.Ma
   );
 }
 
-function Model({ children, color = "white", roughness = 0.1, metalness = 0 }: ModelProps) {
+function Model({ children, color = 'white', roughness = 0.1, metalness = 0 }: ModelProps) {
   const { nodes, materials } = useGLTF('/models/c-transformed.glb') as any;
 
   return (
@@ -92,5 +106,5 @@ function Model({ children, color = "white", roughness = 0.1, metalness = 0 }: Mo
       <meshStandardMaterial metalness={metalness} roughness={roughness} map={materials.base.map} color={color} />
       {children}
     </mesh>
-  )
+  );
 }

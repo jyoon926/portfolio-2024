@@ -15,9 +15,7 @@ interface BlendedColors {
 
 // Custom hooks
 const useColorScheme = () => {
-  const [colorScheme, setColorScheme] = useState<number>(() =>
-    parseFloat(localStorage.getItem('theme') || '2.3')
-  );
+  const [colorScheme, setColorScheme] = useState<number>(() => parseFloat(localStorage.getItem('theme') || '2.3'));
 
   const handleThemeChange = useCallback((value: number) => {
     setColorScheme(value);
@@ -65,7 +63,7 @@ const blendColors = (color1: string, color2: string, factor: number): string => 
   return [
     Math.round(r1 + factor * (r2 - r1)),
     Math.round(g1 + factor * (g2 - g1)),
-    Math.round(b1 + factor * (b2 - b1))
+    Math.round(b1 + factor * (b2 - b1)),
   ].join(', ');
 };
 
@@ -80,7 +78,7 @@ const getBlendedColors = (colorScheme: number): BlendedColors => {
 
     return {
       background: blendColors(lowerScheme.background, upperScheme.background, blendFactor),
-      foreground: blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground
+      foreground: blendFactor < 0.5 ? lowerScheme.foreground : upperScheme.foreground,
     };
   } catch (error) {
     console.error('Error blending colors:', error);
@@ -88,10 +86,14 @@ const getBlendedColors = (colorScheme: number): BlendedColors => {
   }
 };
 
-const Home = ({ sectionRefs, isLoaded, onTabClick }: {
-  sectionRefs: React.MutableRefObject<(HTMLDivElement | null)[]>,
-  isLoaded: boolean,
-  onTabClick: (index: number) => void
+const Home = ({
+  sectionRefs,
+  isLoaded,
+  onTabClick,
+}: {
+  sectionRefs: React.MutableRefObject<(HTMLDivElement | null)[]>;
+  isLoaded: boolean;
+  onTabClick: (index: number) => void;
 }) => (
   <div>
     {Sections.map((section, index) => (
@@ -122,7 +124,7 @@ function App() {
 
   const onLoaded = () => {
     setIsLoaded(true);
-  }
+  };
 
   return (
     <div className="text-foreground">

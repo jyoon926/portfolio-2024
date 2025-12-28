@@ -79,8 +79,9 @@ export default function Slideshow({ photos, selected, isOpen, onClose }: Props) 
   return (
     <div
       ref={containerRef}
-      className={`fixed inset-0 flex items-center justify-center z-50 bg-background/50 backdrop-blur transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+      className={`fixed inset-0 flex items-center justify-center z-50 bg-background/50 backdrop-blur transition-opacity duration-200 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
     >
       {/* Photos */}
       {photos.map((photo, index) => (

@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { CreativeWorks } from "../utils/Data";
-import Slideshow from "./Slideshow";
+import { useState } from 'react';
+import { CreativeWorks } from '../utils/Data';
+import Slideshow from './Slideshow';
 
 export default function CreativeWorksSection() {
   const [isSlideshowOpen, setIsSlideshowOpen] = useState(false);
@@ -21,7 +21,10 @@ export default function CreativeWorksSection() {
         >
           {CreativeWorks.map((work, index) => (
             <button className="w-full flex flex-col" onClick={() => handlePhotoClick(index)} key={index}>
-              <div className="w-full aspect-[3/4] bg-cover bg-center mix-blend-luminosity" style={{ backgroundImage: `url(${work.image})` }} />
+              <div
+                className="w-full aspect-[3/4] bg-cover bg-center mix-blend-luminosity"
+                style={{ backgroundImage: `url(${work.image})` }}
+              />
             </button>
           ))}
         </div>
@@ -33,5 +36,5 @@ export default function CreativeWorksSection() {
         onClose={() => setIsSlideshowOpen(false)}
       />
     </div>
-  )
+  );
 }

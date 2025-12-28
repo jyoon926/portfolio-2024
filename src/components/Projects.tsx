@@ -52,7 +52,9 @@ export default function ProjectsSection() {
 
   return (
     <div className="border-t flex flex-col items-start justify-start mx-5 py-24">
-      <p className="text-4xl mb-10" ref={headerRef}>Latest Projects</p>
+      <p className="text-4xl mb-10" ref={headerRef}>
+        Latest Projects
+      </p>
       <div
         className="w-full flex flex-col md:grid gap-x-5 gap-y-8"
         style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(500px, 1fr))' }}

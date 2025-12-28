@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import LoadingDots from "./LoadingDots";
+import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import LoadingDots from './LoadingDots';
 
 interface Props {
   onLoaded: () => void;
@@ -16,12 +16,19 @@ export default function Loader({ onLoaded }: Props) {
     const fadeOut = () => {
       onLoaded();
       gsap.to(textRef.current, {
-        opacity: 0, duration: 1, ease: "power2.out", delay: 0.5
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 0.5,
       });
       gsap.to(loaderRef.current, {
-        opacity: 0, duration: 1, ease: "power2.out", delay: 1, onComplete: () => {
-          if (loaderRef.current) loaderRef.current.style.display = "none";
-        }
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 1,
+        onComplete: () => {
+          if (loaderRef.current) loaderRef.current.style.display = 'none';
+        },
       });
     };
 
@@ -31,23 +38,31 @@ export default function Loader({ onLoaded }: Props) {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.fromTo(textRef.current, { opacity: 0 }, {
-      opacity: 1, duration: 1, ease: "power2.out", delay: 0.5, onComplete: () => {
-        setIsFadedIn(true);
+    tl.fromTo(
+      textRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 0.5,
+        onComplete: () => {
+          setIsFadedIn(true);
+        },
       }
-    });
+    );
 
     const handleLoad = () => {
       setIsLoaded(true);
-    }
+    };
 
-    if (document.readyState === "complete") {
+    if (document.readyState === 'complete') {
       setIsLoaded(true);
     } else {
-      window.addEventListener("load", handleLoad);
+      window.addEventListener('load', handleLoad);
     }
 
-    return () => window.removeEventListener("load", handleLoad);
+    return () => window.removeEventListener('load', handleLoad);
   }, []);
 
   return (
@@ -60,4 +75,4 @@ export default function Loader({ onLoaded }: Props) {
       </div>
     </div>
   );
-};
+}
