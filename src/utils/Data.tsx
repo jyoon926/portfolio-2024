@@ -48,14 +48,15 @@ import { PiCubeTransparent } from 'react-icons/pi';
 import { IoCameraSharp, IoGameController, IoMusicalNotes } from 'react-icons/io5';
 import { GiClarinet, GiGuitar, GiSewingNeedle, GiStoneBlock } from 'react-icons/gi';
 import { HiDatabase } from 'react-icons/hi';
+import AboutSection from '../components/About';
 
 export const Sections = [
   { title: 'Intro', component: IntroSection },
   { title: 'Projects', component: ProjectsSection },
+  { title: 'About', component: AboutSection },
   { title: 'Experience', component: ExperienceSection },
   { title: 'Education', component: EducationSection },
   { title: 'Skills', component: SkillsSection },
-  // { title: 'Creative Works', component: CreativeWorksSection },
   { title: 'Contact', component: ContactSection },
 ];
 
@@ -106,7 +107,7 @@ export const Intro = {
   intros: [
     {
       label: 'For Anyone',
-      text: 'Hi! I’m a software engineer and machine learning researcher who designs thoughtful, beautiful, and intelligent digital experiences.',
+      text: 'Hi! I’m a software engineer and machine learning researcher with a passion for intentional, beautiful, and intelligent digital experiences.',
     },
     {
       label: 'Recruiters',
@@ -125,7 +126,11 @@ export const Intro = {
       text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique digital experiences. Let's collaborate!",
     },
   ],
-  bio: `I’m a BS/MS computer science student at RIT focused on software engineering and machine learning research. I enjoy building robust, scalable software while approaching problems with an artist’s sensitivity to form, interaction, and experience. I’m particularly drawn to ML-driven systems, interactive visual tools, and products that balance technical capability with creative intention, treating software not just as infrastructure, but as a medium for expression.`,
+  bio: `I’m drawn to software and machine learning because of the power they offer to shape ideas into living systems.
+  
+  To me, code isn’t just a technical tool. It is a creative medium that can express logic, structure, and intention at scale. I approach engineering problems with a designer’s and artist’s sensitivity, paying close attention to how systems are constructed, whether architecturally, visually, or interactively.
+  
+  Outside of software, I find creative expression through music (guitar and oboe) and fashion design, and physical exploration through activities like rock climbing, soccer, and weight lifting. These practices sharpen my sense of form, rhythm, and balance, and they influence how I think about building technology with curiosity, care, and an appreciation for beauty across visual, auditory, physical, and technical dimensions.`,
 };
 
 export const Projects = [

@@ -74,7 +74,7 @@ export default function IntroSection({ isLoaded, onTabClick }: Props) {
           <div className="max-w-[800px] leading-[1.15] pb-10 text-2xl md:text-3xl z-[1]">
             {Intro.intros[currentTab].text}
           </div>
-          <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p>
+          {/* <p className="leading-snug pb-10 max-w-[600px] z-[1]">{Intro.bio}</p> */}
           <div className="flex flex-row gap-5 pb-10 z-[1]">
             <button className="button" onClick={() => onTabClick(1)}>
               View Projects <IoArrowDownSharp />
