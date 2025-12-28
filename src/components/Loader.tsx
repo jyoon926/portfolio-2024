@@ -68,8 +68,8 @@ export default function Loader({ onLoaded }: Props) {
   return (
     <div ref={loaderRef} className="fixed inset-0 flex flex-col items-center justify-center p-3 bg-background z-50">
       <div ref={textRef} className="flex flex-col items-center gap-6">
-        <div className="text-xl md:text-3xl">
-          Jacob Yoon<span className="opacity-60"> — Software Engineer and ML Researcher</span>
+        <div className="text-center text-xl md:text-3xl">
+          Jacob Yoon<span className="opacity-60"> — Software Engineer</span>
         </div>
         <LoadingDots />
       </div>
