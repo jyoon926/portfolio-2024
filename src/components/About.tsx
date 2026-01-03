@@ -77,8 +77,8 @@ export default function AboutSection({ onTabClick }: Props) {
       <p className="text-4xl text-center mb-12" ref={headerRef}>
         About
       </p>
-      <p className="text-xl md:text-2xl leading-snug opacity-60 whitespace-pre-line mb-8 max-w-[1500px]" ref={bioRef}>{Intro.bio}</p>
-      <button className="text-xl md:text-2xl button" onClick={() => onTabClick(6)} ref={ctaRef}>
+      <p className="text-lg md:text-2xl leading-snug opacity-60 whitespace-pre-line mb-8 max-w-[1500px]" ref={bioRef}>{Intro.bio}</p>
+      <button className="text-lg md:text-2xl button" onClick={() => onTabClick(6)} ref={ctaRef}>
         Contact me <IoArrowDownSharp />
       </button>
     </div>
