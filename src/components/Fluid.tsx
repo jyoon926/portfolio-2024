@@ -13,7 +13,7 @@ const config = {
   stopDecay: 0.85,
   colorIntensity: 1.0,
   softness: 1.0,
-  grainStrength: 0.05,
+  grainStrength: 0.02,
 };
 
 /* ---------------- Color Utils ---------------- */
@@ -264,13 +264,13 @@ export default function Fluid({ colorScheme }: { colorScheme: number }) {
     const baseColor = new THREE.Vector3();
     rgbStringToVec3(theme.background, baseColor);
 
-    adjustColor(baseColor, -0.1, 2.0, color1.current);
+    adjustColor(baseColor, -0.1, 1.5, color1.current);
     adjustColor(baseColor, 0.1, 1.0, color2.current);
-    adjustColor(baseColor, -0.1, 2.0, color3.current);
+    adjustColor(baseColor, -0.1, 1.5, color3.current);
     adjustColor(baseColor, 0.1, 1.0, color4.current);
 
     displayMaterialRef.current.uniformsNeedUpdate = true;
   }, [colorScheme]);
 
-  return <div ref={containerRef} className={`fixed inset-0 z-[-1] ${colorScheme === 0 || colorScheme === ColorSchemes.length - 1 ? "opacity-90" : "opacity-20"}`} />;
+  return <div ref={containerRef} className={`fixed inset-0 z-[-1] ${colorScheme === 0 || colorScheme === ColorSchemes.length - 1 ? "opacity-90" : "opacity-30"}`} />;
 }
