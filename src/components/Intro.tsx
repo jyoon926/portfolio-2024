@@ -51,8 +51,8 @@ export default function IntroSection({ isLoaded, onTabClick }: Props) {
         <div ref={introRef} className="max-w-[800px] w-full flex flex-col items-start justify-start overflow-hidden">
           {/* Tabs */}
           <div className="w-full relative pb-5 z-[1]">
-            {/* <div className={`gradient-left ${!showLeftGradient && 'opacity-0'}`}></div>
-            <div className={`gradient-right ${!showRightGradient && 'opacity-0'}`}></div> */}
+            <div className={`gradient-left opacity-0 ${!showLeftGradient && 'opacity-0'}`}></div>
+            <div className={`gradient-right opacity-0 ${!showRightGradient && 'opacity-0'}`}></div>
             <div
               ref={tabContainerRef}
               className="flex flex-row gap-1 text-nowrap overflow-x-auto overflow-y-hidden scrollbar-hidden"
