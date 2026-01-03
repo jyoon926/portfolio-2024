@@ -264,13 +264,13 @@ export default function Fluid({ colorScheme }: { colorScheme: number }) {
     const baseColor = new THREE.Vector3();
     rgbStringToVec3(theme.background, baseColor);
 
-    adjustColor(baseColor, -0.1, 1.5, color1.current);
-    adjustColor(baseColor, 0.1, 1.0, color2.current);
-    adjustColor(baseColor, -0.1, 1.5, color3.current);
-    adjustColor(baseColor, 0.1, 1.0, color4.current);
+    adjustColor(baseColor, -0.05, 1.5, color1.current);
+    adjustColor(baseColor, 0.05, 1.0, color2.current);
+    adjustColor(baseColor, -0.05, 1.5, color3.current);
+    adjustColor(baseColor, 0.05, 1.0, color4.current);
 
     displayMaterialRef.current.uniformsNeedUpdate = true;
   }, [colorScheme]);
 
-  return <div ref={containerRef} className={`fixed inset-0 z-[-1] ${colorScheme === 0 || colorScheme === ColorSchemes.length - 1 ? "opacity-90" : "opacity-30"}`} />;
+  return <div ref={containerRef} className={`fixed inset-0 z-[-1] ${colorScheme === 0 || colorScheme === ColorSchemes.length - 1 ? "opacity-100" : "opacity-100"}`} />;
 }

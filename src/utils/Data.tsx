@@ -63,13 +63,13 @@ export const Sections = [
 export const ColorSchemes = [
   {
     name: 'Dark Black',
-    background: '0, 0, 0',
-    foreground: '255, 255, 255',
+    background: '30, 30, 30',
+    foreground: '250, 248, 239',
   },
   {
-    name: 'Dark Green',
-    background: '5, 26, 28',
-    foreground: '255, 255, 255',
+    name: 'Dark Brown',
+    background: '33, 26, 24',
+    foreground: '245, 234, 226',
   },
   {
     name: 'Dark Grey',
@@ -89,7 +89,7 @@ export const ColorSchemes = [
   {
     name: 'Light Olive',
     background: '211, 214, 197',
-    foreground: '31, 33, 26',
+    foreground: '45, 48, 31',
   },
   {
     name: 'Light Tan',
@@ -98,8 +98,8 @@ export const ColorSchemes = [
   },
   {
     name: 'Light White',
-    background: '255, 255, 255',
-    foreground: '20, 20, 20',
+    background: '234, 233, 229',
+    foreground: '72, 71, 65',
   },
 ];
 
