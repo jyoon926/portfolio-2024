@@ -29,7 +29,7 @@ export default function Menu({ isLoaded, currentSection, onTabClick }: Props) {
 
   return (
     <>
-      <div className="top-0 fixed w-full flex flex-row gap-6 py-3.5 px-5 items-center justify-between z-40 backdrop-blur-lg bg-background/70 border-b text-nowrap">
+      <div className="top-0 fixed w-full flex flex-row gap-6 py-3.5 px-5 items-center justify-between z-40 backdrop-blur bg-background/50 border-b text-nowrap">
         <button onClick={() => handleTabClick(0)}>
           Jacob Yoon<span className="hidden md:inline opacity-60"> — Software Engineer</span>
         </button>

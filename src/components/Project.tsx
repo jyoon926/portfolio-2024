@@ -39,9 +39,9 @@ export default function Project() {
   useDocumentTitle(`Project — ${project?.title}`);
 
   return (
-    <div className="absolute top-0 left-0 bg-background z-40 w-full min-h-screen p-5 pb-24 flex flex-col justify-start items-start gap-10">
+    <div className="absolute top-0 left-0 z-40 w-full min-h-screen p-5 pb-24 flex flex-col justify-start items-start gap-10">
       <Link
-        className="fixed top-0 left-0 w-full p-3 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/70"
+        className="fixed top-0 left-0 w-full p-3.5 flex flex-row gap-1 border-b z-40 backdrop-blur bg-background/50"
         to="/"
       >
         <MdArrowBackIos className="text-sm" /> Home

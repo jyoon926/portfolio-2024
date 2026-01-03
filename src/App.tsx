@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Project from './components/Project';
 import ScrollToTop from './components/ScrollToTop';
 import ColorSlider from './components/ColorSlider';
+import Fluid from './components/Fluid';
 
 interface BlendedColors {
   background: string;
@@ -15,7 +16,7 @@ interface BlendedColors {
 
 // Custom hooks
 const useColorScheme = () => {
-  const [colorScheme, setColorScheme] = useState<number>(() => parseFloat(localStorage.getItem('theme') || '2.3'));
+  const [colorScheme, setColorScheme] = useState<number>(() => parseFloat(localStorage.getItem('theme') || '2'));
 
   const handleThemeChange = useCallback((value: number) => {
     setColorScheme(value);
@@ -67,7 +68,7 @@ const blendColors = (color1: string, color2: string, factor: number): string => 
   ].join(', ');
 };
 
-const getBlendedColors = (colorScheme: number): BlendedColors => {
+export const getBlendedColors = (colorScheme: number): BlendedColors => {
   try {
     const lowerIndex = Math.floor(colorScheme);
     const upperIndex = Math.ceil(colorScheme) % ColorSchemes.length;
@@ -136,6 +137,7 @@ function App() {
         <Route path="/project/:projectUrl" element={<Project />} />
       </Routes>
       <ColorSlider colorScheme={colorScheme} onThemeChange={handleThemeChange} />
+      <Fluid colorScheme={colorScheme} />
     </div>
   );
 }
