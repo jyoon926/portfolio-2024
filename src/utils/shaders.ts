@@ -119,13 +119,13 @@ export const displayShader = `
   uniform vec3 uColor4;
   uniform float uColorIntensity;
   uniform float uSoftness;
-  uniform float uGrainStrength; // New grain parameter
+  uniform float uGrainStrength;
   varying vec2 vUv;
 
-  float hash(vec2 p) {
-    p = fract(p * vec2(123.34, 456.21));
-    p += dot(p, p + 78.233);
-    return fract(p.x * p.y);
+  float hash(vec3 p) {
+    p = fract(p * 0.1031);
+    p += dot(p, p.yzx + 33.33);
+    return fract((p.x + p.y) * p.z);
   }
 
   void main() {
@@ -159,11 +159,13 @@ export const displayShader = `
     vec3 col = mix(uColor1, uColor2, mixer1);
     col = mix(col, uColor3, mixer2);
     col = mix(col, uColor4, mixer3 * 0.4);
-
     col *= uColorIntensity;
 
-    // --- Filmic grain ---
-    float noise = hash(fragCoord + iTime * 10.0) - 0.5; // center at 0
+    // --- True per-pixel grain (no spatial drift) ---
+    vec2 pixel = floor(fragCoord);
+    float frame = floor(iTime * 60.0);
+
+    float noise = hash(vec3(pixel, frame)) - 0.5;
     col += noise * uGrainStrength;
 
     gl_FragColor = vec4(col, 1.0);
