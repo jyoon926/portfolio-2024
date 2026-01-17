@@ -53,7 +53,7 @@ export default function Project() {
             <p className="text-4xl text-center">{project.title}</p>
             <p className="text-center">{project.date}</p>
             <button
-              className="my-10 lg:w-3/4 border bg-foreground/15 p-5 lg:p-10 duration-300 hover:bg-foreground/25"
+              className="my-10 lg:w-3/4 border bg-foreground/15 backdrop-blur p-5 lg:p-10 duration-300 hover:bg-foreground/25"
               onClick={() => handlePhotoClick(0)}
             >
               <img className="w-full" src={project.images[0]} alt={`Main project image for '${project.title}'.`} />
@@ -68,7 +68,7 @@ export default function Project() {
             </div>
             <div className="w-full mb-10 flex flex-row justify-center gap-5">
               <Link
-                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 backdrop-blur py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
                 to={project.link}
                 target="_blank"
               >
@@ -76,7 +76,7 @@ export default function Project() {
                 Visit Site
               </Link>
               <Link
-                className="bg-foreground/15 py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
+                className="bg-foreground/15 backdrop-blur py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
                 to={project.github}
                 target="_blank"
               >
@@ -90,7 +90,7 @@ export default function Project() {
             >
               {project.images.slice(1).map((image, index) => (
                 <button
-                  className="border bg-foreground/15 p-5 md:p-8 duration-300 hover:bg-foreground/25"
+                  className="border bg-foreground/15 backdrop-blur p-5 md:p-8 duration-300 hover:bg-foreground/25"
                   key={index}
                   onClick={() => handlePhotoClick(index + 1)}
                 >

@@ -66,7 +66,7 @@ export default function ProjectsSection() {
             to={`/project/${project.projectUrl}`}
             ref={(el) => (projectRefs.current[index] = el)}
           >
-            <div className="border duration-300 bg-foreground/15 hover:bg-foreground/25 p-5 md:p-8">
+            <div className="border duration-300 bg-foreground/15 backdrop-blur hover:bg-foreground/25 p-5 md:p-8">
               <img src={project.images[0]} alt={`Project thumbnail for '${project.title}'`} />
             </div>
             <div className="grow flex flex-col leading-snug text-nowrap">
