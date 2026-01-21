@@ -18,6 +18,75 @@
     />
   </head>
   <body>
+    <script>
+      (function () {
+        try {
+          const theme = parseFloat(localStorage.getItem('theme') || '2');
+          const ColorSchemes = [
+            {
+              name: 'Dark Black',
+              background: '30, 30, 30',
+              foreground: '250, 248, 239',
+            },
+            {
+              name: 'Dark Brown',
+              background: '33, 26, 24',
+              foreground: '245, 234, 226',
+            },
+            {
+              name: 'Dark Grey',
+              background: '74, 71, 68',
+              foreground: '255, 255, 255',
+            },
+            {
+              name: 'Dark Tan',
+              background: '107, 96, 84',
+              foreground: '255, 255, 255',
+            },
+            {
+              name: 'Light Brown',
+              background: '209, 199, 186',
+              foreground: '26, 23, 20',
+            },
+            {
+              name: 'Light Olive',
+              background: '211, 214, 197',
+              foreground: '45, 48, 31',
+            },
+            {
+              name: 'Light Tan',
+              background: '229, 225, 219',
+              foreground: '69, 61, 56',
+            },
+            {
+              name: 'Light White',
+              background: '234, 233, 229',
+              foreground: '72, 71, 65',
+            },
+          ];
+
+          const lower = Math.floor(theme);
+          const upper = Math.ceil(theme) % ColorSchemes.length;
+          const factor = theme - lower;
+
+          const blend = (a, b) =>
+            a.map((v, i) => Math.round(v + factor * (b[i] - v)));
+
+          const bg = blend(
+            ColorSchemes[lower].background.split(',').map(Number),
+            ColorSchemes[upper].background.split(',').map(Number)
+          ).join(', ');
+
+          const fg =
+            factor < 0.5
+              ? ColorSchemes[lower].foreground
+              : ColorSchemes[upper].foreground;
+
+          document.documentElement.style.setProperty('--background', bg);
+          document.documentElement.style.setProperty('--foreground', fg);
+        } catch {}
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

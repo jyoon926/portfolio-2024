@@ -232,12 +232,12 @@ button:disabled {
 
 @keyframes pulse {
   0% {
-    opacity: 1;
+    background: transparent;
   }
   50% {
-    opacity: 0.25;
+    background: rgb(var(--foreground));
   }
   100% {
-    opacity: 1;
+    background: transparent;
   }
 }
