@@ -126,11 +126,11 @@ export const Intro = {
       text: "I'm a programmer but also an artist at heart. I love blending creativity with technology to craft unique digital experiences. Let's collaborate!",
     },
   ],
-  bio: `I’m drawn to software and machine learning because of the power they offer to shape ideas into living systems.
+  bio: `I’m drawn to software and machine learning for their ability to turn ideas into living systems.
   
-  To me, code isn’t just a technical tool. It is a creative medium that can express logic, structure, and intention at scale. I approach engineering problems with a designer’s and artist’s sensitivity, paying close attention to how systems are constructed, whether architecturally, visually, or interactively.
+  To me, code isn’t just a technical tool. It is a creative medium that can express logic, structure, and intention at scale. I approach engineering problems with a designer’s and artist’s sensitivity, paying close attention to how systems are shaped architecturally, visually, and interactively.
   
-  Outside of software, I find creative expression through music (guitar and oboe) and fashion design, and physical exploration through activities like rock climbing, soccer, and weight lifting. These practices sharpen my sense of form, rhythm, and balance, and they influence how I think about building technology with curiosity, care, and an appreciation for beauty across visual, auditory, physical, and technical dimensions.`,
+  Outside of software, I stay creative through music (guitar and oboe) and fashion design, and active through rock climbing, soccer, and weight training. These interests help me think about form, rhythm, and balance, and they influence how I build technology: paying attention to structure, flow, and the experience of the people using what I build.`,
 };
 
 export const Projects = [
@@ -272,7 +272,7 @@ export const Education = {
     'Cumulative GPA: 3.89/4.0',
     'Master’s Thesis: Unified Graph Representations for Multimodal Mathematical Information Retrieval',
     'Relevant coursework: Information Retrieval, Computer Vision, Graph Databases, Machine Learning, Computational Geometry, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
-    'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)',
+    'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Chamber Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)',
   ],
 };
 
