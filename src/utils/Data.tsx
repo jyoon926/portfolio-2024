@@ -18,6 +18,7 @@ import EducationSection from '../components/Education';
 import ExperienceSection from '../components/Experience';
 import IntroSection from '../components/Intro';
 import ProjectsSection from '../components/Projects';
+import ResearchSection from '../components/Research';
 import SkillsSection from '../components/Skills';
 import {
   SiC,
@@ -55,6 +56,7 @@ export const Sections = [
   { title: 'Projects', component: ProjectsSection },
   { title: 'About', component: AboutSection },
   { title: 'Experience', component: ExperienceSection },
+  { title: 'Research', component: ResearchSection },
   { title: 'Education', component: EducationSection },
   { title: 'Skills', component: SkillsSection },
   { title: 'Contact', component: ContactSection },
@@ -232,6 +234,28 @@ export const Projects = [
   },
 ];
 
+export const Research = [
+  {
+    title: 'MathAMR+: A Unified Graph Neural Network Framework for Multimodal Mathematical Information Retrieval',
+    subtitle: 'MS Thesis',
+    date: 'August 2025 — May 2026',
+    meta: ['Advisor: Dr. Richard Zanibbi'],
+    abstract: `Mathematical Information Retrieval (MIR) focuses on developing systems that enable users to search for and retrieve documents containing mathematical content. A key challenge in building effective math-aware retrieval systems lies in jointly modeling the symbolic and operational structure of mathematical expressions together with their surrounding linguistic context. Existing approaches often use linear token sequences, losing structural information, or rely on separate models for text and math, limiting their ability to capture cross-modal patterns and learn contextualized representations.
+
+    This thesis proposes MathAMR+, a graph neural network-based retrieval framework that jointly models Abstract Meaning Representation (AMR) graphs, Operator Trees (OPTs), and Symbol Layout Trees (SLTs). Unlike prior work that linearizes similar graph representations for Transformer encoders, the proposed model preserves graph structure and learns contextualized multi-vector representations for fine-grained alignment between textual and mathematical components. It employs a Relational Graph Convolutional Network (RGCN) with hierarchical virtual nodes at the formula, sentence, and document levels to enable structured aggregation and long-range message passing. The model is trained using contrastive learning for dense multi-vector retrieval and evaluated on the ARQMath-3 benchmark.
+
+    The central research question is whether explicitly modeling contextualized text-formula interactions through a unified graph representation improves math-aware retrieval compared to prior approaches that either linearize such representations or rely on separate specialized techniques for the two modalities. Initial results suggest that MathAMR+ effectively leverages its joint graph representation to achieve strong math-aware retrieval performance, with experiments indicating that its gains stem from the complementary structure of operator and symbol layout trees, the robustness of relational message passing over hierarchical virtual nodes, and the benefits of fine-grained multi-vector interactions for aligning mathematical expressions with surrounding textual context.`,
+    link: 'https://www.proquest.com/docview/3336734205',
+  },
+  {
+    title: 'Searching for Solutions: A Survey of Mathematical Reasoning with Large Language Models',
+    subtitle: 'Survey Paper',
+    date: 'January 2026 — May 2026',
+    meta: ['Jacob Yoon and Richard Zanibbi', 'Submitted to ACM Computing Surveys (CSUR), June 2026'],
+    abstract: `Applying large language models (LLMs) to mathematical reasoning has required increasingly sophisticated techniques to overcome limitations in symbolic manipulation, multi-step reasoning, and systematic exploration in transformer-based models. To better understand and organize these methods, this survey presents a unifying view that frames mathematical reasoning as a search process over structured states and trajectories, and introduces the Generate-Verify-Refine (GVR) framework to organize existing methods into three components that define how candidate solutions are proposed, evaluated, and iteratively improved. Using this framework, we compare methods, identify shared design patterns, and characterize key tradeoffs in how approaches target and integrate individual GVR components. We further identify a systematic gap in evaluation practice, where final-answer accuracy conflates the contributions of the three components. To address this, we organize existing metrics and propose new ones using our search-based framework to enable richer evaluation and analysis of methods. Finally, we highlight open problems and directions for future work.`,
+  },
+];
+
 export const Experience = [
   {
     company: 'Epic Systems',
@@ -265,12 +289,11 @@ export const Experience = [
 
 export const Education = {
   school: 'Rochester Institute of Technology',
-  degree: 'Combined Bachelor of Science and Master of Science in Computer Science',
+  degree: 'Bachelor of Science and Master of Science in Computer Science',
   location: 'Rochester, NY',
   date: 'August 2021 — May 2026',
   bullets: [
-    'Cumulative GPA: 3.89/4.0',
-    'Master’s Thesis: Unified Graph Representations for Multimodal Mathematical Information Retrieval',
+    'GPA: 4.0/4.0 (MS), 3.89/4.0 (BS)',
     'Relevant coursework: Information Retrieval, Computer Vision, Graph Databases, Machine Learning, Computational Geometry, Parallel and Distributed Systems, Programming Language Concepts, Principles of Database Management, Intro to AI, Analysis of Algorithms, Mechanics of Programming, Intro to Software Engineering, CS Theory',
     'Activities: RIT Philharmonic Orchestra (Principal Oboe), RIT Chamber Orchestra (Principal Oboe), RIT Fabrick (Co-Founder and President)',
   ],

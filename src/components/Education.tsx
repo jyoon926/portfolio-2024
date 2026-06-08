@@ -63,11 +63,11 @@ export default function EducationSection() {
           ref={educationRef} // Reference the content for fade-in effect
         >
           <div className="flex flex-col w-full gap-1 md:w-1/3">
-            <p className="font-bold">{Education.school}</p>
+            <p className="font-bold mb-2">{Education.school}</p>
             <p className="opacity-60">{Education.location}</p>
           </div>
           <div className="flex flex-col w-full gap-1 md:w-2/3 max-w-[600px]">
-            <p className="font-bold">{Education.degree}</p>
+            <p className="font-bold mb-2">{Education.degree}</p>
             <p className="opacity-60">{Education.date}</p>
             {Education.bullets.map((bullet) => (
               <p className="opacity-60 mt-3" key={bullet}>

@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "preview": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "resume": "latexmk -pdf -interaction=nonstopmode -halt-on-error -cd resume/main.tex && latexmk -cd -c resume/main.tex && node -e \"require('fs').copyFileSync('resume/main.pdf','public/documents/Jacob_Yoon_Resume.pdf')\""
   },
   "dependencies": {
     "@react-three/drei": "^9.121.3",

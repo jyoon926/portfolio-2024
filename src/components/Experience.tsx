@@ -62,11 +62,11 @@ export default function ExperienceSection() {
             ref={(el) => (experienceRefs.current[index] = el)}
           >
             <div className="flex flex-col w-full gap-1 md:w-1/3">
-              <p className="font-bold">{job.company}</p>
+              <p className="font-bold mb-2">{job.company}</p>
               <p className="opacity-60">{job.date}</p>
             </div>
             <div className="flex flex-col w-full gap-1 md:w-2/3 max-w-[600px]">
-              <p className="font-bold">{job.role}</p>
+              <p className="font-bold mb-2">{job.role}</p>
               <p className="opacity-60">{job.description}</p>
             </div>
           </div>

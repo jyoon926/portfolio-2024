@@ -73,7 +73,7 @@ export default function Project() {
                 target="_blank"
               >
                 <MdOpenInNew className="text-xl" />
-                Visit Site
+                Visit site
               </Link>
               <Link
                 className="bg-foreground/15 backdrop-blur py-3 w-32 flex flex-row items-center justify-center gap-2 border duration-300 hover:bg-foreground/15"
