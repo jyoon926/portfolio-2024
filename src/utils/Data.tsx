@@ -245,7 +245,7 @@ export const Research = [
     This thesis proposes MathAMR+, a graph neural network-based retrieval framework that jointly models Abstract Meaning Representation (AMR) graphs, Operator Trees (OPTs), and Symbol Layout Trees (SLTs). Unlike prior work that linearizes similar graph representations for Transformer encoders, the proposed model preserves graph structure and learns contextualized multi-vector representations for fine-grained alignment between textual and mathematical components. It employs a Relational Graph Convolutional Network (RGCN) with hierarchical virtual nodes at the formula, sentence, and document levels to enable structured aggregation and long-range message passing. The model is trained using contrastive learning for dense multi-vector retrieval and evaluated on the ARQMath-3 benchmark.
 
     The central research question is whether explicitly modeling contextualized text-formula interactions through a unified graph representation improves math-aware retrieval compared to prior approaches that either linearize such representations or rely on separate specialized techniques for the two modalities. Initial results suggest that MathAMR+ effectively leverages its joint graph representation to achieve strong math-aware retrieval performance, with experiments indicating that its gains stem from the complementary structure of operator and symbol layout trees, the robustness of relational message passing over hierarchical virtual nodes, and the benefits of fine-grained multi-vector interactions for aligning mathematical expressions with surrounding textual context.`,
-    link: 'https://www.proquest.com/docview/3336734205',
+    link: 'https://www.cs.rit.edu/~rlaz/dprl/Jacob_Yoon_MS_Thesis.pdf',
   },
   {
     title: 'Searching for Solutions: A Survey of Mathematical Reasoning with Large Language Models',
@@ -259,14 +259,21 @@ export const Research = [
 export const Experience = [
   {
     company: 'Epic Systems',
-    role: 'Software Engineering Intern',
+    role: 'Software Developer',
+    date: 'July 2026 — Present',
+    description:
+      'I joined Epic full-time as a Software Developer on the Cognitive Computing team, building Epic\'s AI infrastructure to enable intelligent healthcare features used by health systems worldwide.',
+  },
+  {
+    company: 'Epic Systems',
+    role: 'Software Developer Intern',
     date: 'May 2025 — August 2025',
     description:
       'I designed and built an LLM-powered conversational assistant that reimagines how patients discover healthcare providers on hospital websites. Working across .NET and Azure infrastructure, I implemented a real-time query workflow and paired it with interactive React components to create a seamless, patient-facing experience. To evaluate and improve agent behavior, I developed a structured assessment framework spanning 100+ representative conversation scenarios, enabling systematic iteration on prompting and agent design. Following the success of this work, I was tasked with engineering an experimental pipeline to measure how response quality changes when the assistant is augmented with organization-specific knowledge bases, helping inform whether healthcare systems should invest in custom retrieval infrastructure or rely on general-purpose language models.',
   },
   {
     company: 'Dassault Systèmes BIOVIA',
-    role: 'Software Engineer Intern',
+    role: 'Software Developer Intern',
     date: 'June 2024 — December 2024',
     description:
       'During my second internship at Dassault Systèmes, I focused on building full-stack automation tools that reduced friction in large-scale project workflows. Using Angular and Node.js, I designed integrations between Jira and internal issue-tracking systems, eliminating 15+ hours of manual work per week for project teams. Alongside this systems work, I implemented user stories and resolved production bugs across a .NET C# and Angular stack, contributing directly to the 3DEXPERIENCE platform used by enterprise customers. The role emphasized reliability, maintainability, and thoughtful abstraction in a complex, long-lived codebase.',
